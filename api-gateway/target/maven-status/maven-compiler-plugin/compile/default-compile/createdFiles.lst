@@ -1,0 +1,4 @@
+com/finpay/gateway/securities/SecurityConfig.class
+com/finpay/gateway/config/GatewayRoutesConfig.class
+com/finpay/gateway/controller/FallbackController.class
+com/finpay/gateway/ApiGatewayApplication.class

@@ -1,0 +1,111 @@
+<mxfile host="app.diagrams.net" modified="2025-09-03T00:00:00.000Z" agent="ChatGPT" version="22.1.3">
+  <diagram id="finpay-arch" name="FinPay Architecture">
+    <mxGraphModel dx="1420" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1080">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- External -->
+        <mxCell id="user" value="React Admin UI" style="shape=hexagon;perimeter=hexagonPerimeter;whiteSpace=wrap;html=1;rounded=1;shadow=0;align=center;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="120" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="mobile" value="Mobile App (future)" style="shape=hexagon;perimeter=hexagonPerimeter;whiteSpace=wrap;html=1;rounded=1;shadow=0;align=center;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="210" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- API Gateway -->
+        <mxCell id="api-gw" value="API Gateway / Edge (Spring Cloud Gateway)" style="shape=process;whiteSpace=wrap;html=1;rounded=1;align=center;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="250" y="150" width="220" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Auth -->
+        <mxCell id="auth" value="Auth Service (Spring Security + JWT)" style="shape=process;whiteSpace=wrap;html=1;rounded=1;align=center;fontSize=12;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="520" y="60" width="240" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Account -->
+        <mxCell id="account" value="Account Service" style="shape=process;whiteSpace=wrap;html=1;rounded=1;align=center;fontSize=12;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="520" y="150" width="240" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Transaction -->
+        <mxCell id="tx" value="Transaction Service (ACID + Sagas)" style="shape=process;whiteSpace=wrap;html=1;rounded=1;align=center;fontSize=12;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="520" y="240" width="240" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Fraud -->
+        <mxCell id="fraud" value="Fraud/Risk Service" style="shape=process;whiteSpace=wrap;html=1;rounded=1;align=center;fontSize=12;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="520" y="330" width="240" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Notification -->
+        <mxCell id="notify" value="Notification Service (Email/SMS)" style="shape=process;whiteSpace=wrap;html=1;rounded=1;align=center;fontSize=12;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="520" y="420" width="240" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Databases -->
+        <mxCell id="pg" value="PostgreSQL" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;align=center;fontSize=12;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="820" y="150" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="redis" value="Redis" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;align=center;fontSize=12;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="820" y="240" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="es" value="Elasticsearch" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;align=center;fontSize=12;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="820" y="330" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Kafka -->
+        <mxCell id="kafka" value="Kafka (events: account.created, tx.initiated, tx.completed, fraud.flagged, notification.send)" style="shape=cloud;whiteSpace=wrap;html=1;align=center;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="210" width="320" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- Observability -->
+        <mxCell id="prom" value="Prometheus" style="shape=process;whiteSpace=wrap;html=1;rounded=1;align=center;fontSize=12;fillColor=#e2f0d9;strokeColor=#7ea86f;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="60" width="140" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="graf" value="Grafana" style="shape=process;whiteSpace=wrap;html=1;rounded=1;align=center;fontSize=12;fillColor=#e2f0d9;strokeColor=#7ea86f;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="60" width="140" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="elk" value="ELK / OpenSearch" style="shape=process;whiteSpace=wrap;html=1;rounded=1;align=center;fontSize=12;fillColor=#e2f0d9;strokeColor=#7ea86f;" vertex="1" parent="1">
+          <mxGeometry x="1330" y="60" width="160" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- S3 -->
+        <mxCell id="s3" value="Object Storage (S3) - Receipts/Exports" style="shape=cloud;whiteSpace=wrap;html=1;align=center;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="360" width="320" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- Edges -->
+        <mxCell id="e1" edge="1" parent="1" source="user" target="api-gw"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="mobile" target="api-gw"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="e3" edge="1" parent="1" source="api-gw" target="auth"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="api-gw" target="account"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="api-gw" target="tx"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="api-gw" target="fraud"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="api-gw" target="notify"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="e8" edge="1" parent="1" source="account" target="pg"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="tx" target="pg"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="tx" target="redis"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="fraud" target="es"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="e12" edge="1" parent="1" source="account" target="kafka"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="tx" target="kafka"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="fraud" target="kafka"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="kafka" target="notify"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="e16" edge="1" parent="1" source="tx" target="s3"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="e17" edge="1" parent="1" source="account" target="prom"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e18" edge="1" parent="1" source="tx" target="prom"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e19" edge="1" parent="1" source="notify" target="elk"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
