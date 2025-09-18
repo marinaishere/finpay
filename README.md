@@ -119,6 +119,15 @@ finpay/
 1. [Auth Service](./auth-service/README.md)
 2. [Api Gateway](./api-gateway/README.md)
 3. [Account Service](./account-service/README.md)
+
+## Connect to pgadmin
+```bash
+Hostname: postgres
+Database: finpay
+Username: finpay
+Password: finpay
+Port: 5432
+```
 ## TODO
 
 -   Write clean README.md (setup instructions, tech stack, screenshots).

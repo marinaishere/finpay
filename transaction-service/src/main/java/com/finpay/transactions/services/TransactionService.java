@@ -1,17 +1,26 @@
 package com.finpay.transactions.services;
 
+import com.finpay.common.dto.accounts.AccountDto;
 import com.finpay.common.dto.accounts.CreditRequest;
 import com.finpay.common.dto.accounts.DebitRequest;
+import com.finpay.common.dto.frauds.FraudCheckRequest;
+import com.finpay.common.dto.frauds.FraudCheckResponse;
+import com.finpay.common.dto.notifications.NotificationRequest;
+import com.finpay.common.dto.transactions.TransactionCreatedEvent;
 import com.finpay.common.dto.transactions.TransactionResponse;
 import com.finpay.common.dto.transactions.TransferRequest;
 import com.finpay.transactions.clients.AccountClient;
+import com.finpay.transactions.clients.FraudClient;
+import com.finpay.transactions.clients.NotificationClient;
 import com.finpay.transactions.models.Transaction;
+import com.finpay.transactions.producers.TransactionProducer;
 import com.finpay.transactions.repositories.TransactionRepository;
 import jakarta.transaction.Transactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import java.time.Instant;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -21,10 +30,22 @@ public class TransactionService {
     private static final Logger log = LoggerFactory.getLogger(TransactionService.class);
     private final TransactionRepository repository;
     private final AccountClient accountClient;
+    private final NotificationClient notificationClient;
+    private final FraudClient fraudClient;
+    private final TransactionProducer transactionProducer;
 
-    public TransactionService(TransactionRepository repository, AccountClient accountClient) {
+    public TransactionService(
+            TransactionRepository repository,
+            AccountClient accountClient,
+            NotificationClient notificationClient,
+            FraudClient fraudClient,
+            TransactionProducer transactionProducer
+    ) {
         this.repository = repository;
         this.accountClient = accountClient;
+        this.notificationClient = notificationClient;
+        this.fraudClient = fraudClient;
+        this.transactionProducer = transactionProducer;
     }
 
     @Transactional
@@ -49,24 +70,36 @@ public class TransactionService {
             };
         }
 
-        // brand new transaction
+        // Brand-new transaction
         Transaction newTx = new Transaction();
         newTx.setFromAccountId(request.getFromAccountId());
         newTx.setToAccountId(request.getToAccountId());
         newTx.setAmount(request.getAmount());
         newTx.setIdempotencyKey(idempotencyKey);
         newTx.setStatus(Transaction.Status.PENDING);
+        newTx.setCreatedAt(Instant.now());
+        repository.save(newTx);
 
         log.info("Creating new transaction | key={}", idempotencyKey);
-        return processAndSave(newTx);
+        return processAndSave(newTx, request);
     }
 
     private TransactionResponse retryPayment(Transaction tx, TransferRequest request) {
         tx.setStatus(Transaction.Status.PENDING); // reset status
-        return processAndSave(tx);
+        return processAndSave(tx, request);
     }
 
-    private TransactionResponse processAndSave(Transaction tx) {
+    @Transactional
+    private TransactionResponse processAndSave(Transaction tx, TransferRequest request) {
+
+        FraudCheckResponse fraud = fraudClient.checkFraud(new FraudCheckRequest(tx.getId(), request.getAmount()));
+        if (fraud.isFraudulent()) {
+            tx.setStatus(Transaction.Status.FAILED);
+            repository.save(tx);
+            throw new IllegalStateException("Transaction flagged as fraud: " + fraud.getReason());
+        }
+
+        AccountDto accDto = accountClient.getAccount(request.getFromAccountId());
         try {
             log.info("Debiting account={} amount={}", tx.getFromAccountId(), tx.getAmount());
             accountClient.debit(new DebitRequest(tx.getFromAccountId(), tx.getAmount()));
@@ -75,11 +108,32 @@ public class TransactionService {
             accountClient.credit(new CreditRequest(tx.getToAccountId(), tx.getAmount()));
 
             tx.setStatus(Transaction.Status.COMPLETED);
-            log.info("Transaction completed | id={} | key={}", tx.getId(), tx.getIdempotencyKey());
+            log.info("Transaction completed id={} | key={}", tx.getId(), tx.getIdempotencyKey());
+
+            // 🔔 send notification
+            notificationClient.sendNotification(NotificationRequest.builder()
+                    .userId(accDto.getOwnerEmail())
+                    .message("Transaction Completed Successfully")
+                    .channel("EMAIL")
+                    .build()
+            );
+
+            transactionProducer.sendTransaction(new TransactionCreatedEvent(
+                    tx.getId(),
+                    tx.getAmount(),
+                    accDto.getOwnerEmail()
+            ));
         } catch (Exception e) {
             tx.setStatus(Transaction.Status.FAILED);
-            log.error("Transaction failed | id={} | key={} | reason={}",
+            log.error("Transaction failed id={} | key={} | reason={}",
                     tx.getId(), tx.getIdempotencyKey(), e.getMessage(), e);
+
+            // 🔔 send failure notification
+            notificationClient.sendNotification(NotificationRequest.builder()
+                    .userId(accDto.getOwnerEmail())
+                    .message("Transaction failed. Please try again.")
+                    .channel("EMAIL")
+                    .build());
         }
 
         Transaction saved = repository.save(tx);

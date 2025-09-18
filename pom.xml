@@ -56,6 +56,8 @@
       <module>auth-service</module>
       <module>account-service</module>
       <module>transaction-service</module>
+      <module>notification-service</module>
+      <module>fraud-service</module>
   </modules>
   
 </project>

@@ -46,4 +46,9 @@ public class AccountController {
     public ResponseEntity<AccountDto> credit(@RequestBody CreditRequest request) {
         return ResponseEntity.ok(service.credit(request.getAccountId(), request.getAmount()));
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<AccountDto> getAccount(@PathVariable("id") UUID id) {
+        return ResponseEntity.ok(service.getAccount(id));
+    }
 }

@@ -88,3 +88,30 @@ spring:
 .route("auth-service", r -> r.path("/auth-services/**")
         .uri("lb://auth-service"))
 ```
+## Test Fallback Api
+Stop transaction service
+Then Call transaction APIs
+```bash
+http://127.0.0.1:8080/transactions/me
+```
+Expected:
+```bash
+Transaction Service is currently unavailable. Please try again later.
+```
+## Test RedisRateLimiter
+In command line
+```bash
+for i in {1..20}; do 
+  curl -i -H "Authorization: Bearer <your-jwt>" http://localhost:8080/frauds/transactions/{transactionId}
+done
+```
+Expected:
+First ~10 requests succeed (200 OK).
+After tokens run out, you’ll start getting:
+```bash
+HTTP/1.1 429 Too Many Requests
+```
+Monitor Redis Keys
+```bash
+docker exec -it finpay-redis-1 redis-cli monitor
+```

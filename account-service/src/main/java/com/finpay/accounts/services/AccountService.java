@@ -54,5 +54,11 @@ public class AccountService {
 
         return new AccountDto(acc.getId(), acc.getOwnerEmail(), acc.getBalance());
     }
+
+    public AccountDto getAccount(UUID accountId) {
+        Account acc = repository.findById(accountId)
+                .orElseThrow(() -> new EntityNotFoundException("Account not found"));
+        return new AccountDto(acc.getId(), acc.getOwnerEmail(), acc.getBalance());
+    }
 }
 

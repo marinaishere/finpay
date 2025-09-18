@@ -1,5 +1,6 @@
 package com.finpay.gateway.config;
 
+import org.springframework.cloud.gateway.filter.ratelimit.KeyResolver;
 import org.springframework.cloud.gateway.filter.ratelimit.RedisRateLimiter;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
@@ -8,7 +9,13 @@ import org.springframework.cloud.gateway.route.RouteLocator;
 
 @Configuration
 public class GatewayRoutesConfig {
+    private final RedisRateLimiter redisRateLimiter;
+    private final KeyResolver userKeyResolver;
 
+    public GatewayRoutesConfig(RedisRateLimiter redisRateLimiter, KeyResolver userKeyResolver) {
+        this.redisRateLimiter = redisRateLimiter;
+        this.userKeyResolver = userKeyResolver;
+    }
     @Bean
     public RouteLocator customRotes(RouteLocatorBuilder builder) {
         return builder.routes()
@@ -21,17 +28,17 @@ public class GatewayRoutesConfig {
                                 .setName("transactionCB")
                                 .setFallbackUri("forward:/fallback/transactions")))
                         .uri("http://localhost:8083"))
-                .route("fraud-service", r -> r.path("/fraud/**")
+                .route("notification-service", r -> r.path("/notifications/**")
+                        .uri("http://localhost:8084"))
+                .route("fraud-service", r -> r.path("/frauds/**")
                         .filters(f -> f
                                 .requestRateLimiter(c -> {
-                                    c.setRateLimiter(new RedisRateLimiter(5, 10));
-                                    // 5 requests per second, burst capacity 10
+                                    c.setRateLimiter(redisRateLimiter);
+                                    c.setKeyResolver(userKeyResolver);
                                 })
                         )
-                        .uri("http://localhost:8084")
+                        .uri("http://localhost:8085")
                 )
-                .route("notification-service", r -> r.path("/notifications/**")
-                        .uri("http://localhost:8085"))
                 // Swagger API docs routes
                 .route("api-gateway-docs", r -> r.path("/v3/api-docs/gateway")
                         .filters(f -> f.rewritePath("/v3/api-docs/gateway", "/v3/api-docs"))
@@ -45,6 +52,12 @@ public class GatewayRoutesConfig {
                 .route("transaction-docs", r -> r.path("/v3/api-docs/transaction")
                         .filters(f -> f.rewritePath("/v3/api-docs/transaction", "/v3/api-docs"))
                         .uri("http://localhost:8083"))
+                .route("notification-docs", r -> r.path("/v3/api-docs/notification")
+                        .filters(f -> f.rewritePath("/v3/api-docs/notification", "/v3/api-docs"))
+                        .uri("http://localhost:8084"))
+                .route("fraud-docs", r -> r.path("/v3/api-docs/fraud")
+                        .filters(f -> f.rewritePath("/v3/api-docs/fraud", "/v3/api-docs"))
+                        .uri("http://localhost:8085"))
                 .build();
     }
 }
