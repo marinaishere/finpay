@@ -18,7 +18,8 @@ public class CorsConfig {
                         .allowedOrigins(
                                 "http://localhost:8080",
                                 "http://localhost:8083",
-                                "http://localhost:8085"
+                                "http://localhost:8085",
+                                "http://localhost:9090"
                         )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")

@@ -40,13 +40,53 @@ services:
             ALLOW_PLAINTEXT_LISTENER: "yes"
             KAFKA_CFG_LISTENERS: PLAINTEXT://:9092
             KAFKA_CFG_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+            # Enable JMX for Kafka
+            JMX_PORT: 9999
+            KAFKA_JMX_OPTS: >
+              -Dcom.sun.management.jmxremote
+              -Dcom.sun.management.jmxremote.port=9999
+              -Dcom.sun.management.jmxremote.rmi.port=9999
+              -Dcom.sun.management.jmxremote.authenticate=false
+              -Dcom.sun.management.jmxremote.ssl=false
+              -Djava.rmi.server.hostname=kafka
         ports:
             - "9092:9092"
+            - "9999:9999"
         depends_on:
             - zookeeper
     zipkin:
         image: openzipkin/zipkin
         ports:
             - "9411:9411"
+    prometheus:
+      image: prom/prometheus:latest
+      container_name: prometheus
+      volumes:
+        - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      ports:
+        - "9090:9090"
+
+    grafana:
+      image: grafana/grafana:latest
+      container_name: grafana
+      ports:
+        - "3000:3000"
+      depends_on:
+        - prometheus
+      environment:
+        - GF_SECURITY_ADMIN_USER=admin
+        - GF_SECURITY_ADMIN_PASSWORD=admin
+
+    kafka-jmx-exporter:
+      image: sscaling/jmx-prometheus-exporter
+      ports:
+        - "7071:7071"
+      environment:
+        SERVICE_PORT: 7071
+        CONFIG_YML: /config/kafka-jmx.yml
+      volumes:
+        - ./kafka-jmx.yml:/config/kafka-jmx.yml
+      depends_on:
+        - kafka
 volumes:
     postgres_data:

@@ -128,11 +128,69 @@ Username: finpay
 Password: finpay
 Port: 5432
 ```
+
+## Connect Prometheus + Grafana
+Update pom.xml [fraud-service and transaction-service]
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-actuator</artifactId>
+</dependency>
+
+<dependency>
+    <groupId>io.micrometer</groupId>
+    <artifactId>micrometer-registry-prometheus</artifactId>
+</dependency>
+```
+- Update src/main/resources/properties.yml for both services
+```yml
+  management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus,health,info
+  endpoint:
+    prometheus:
+      enabled: true
+```
+
+- Put this in root folder where docker-compose.yml [prometheus.yml](./prometheus.yml)
+```yml
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  - job_name: 'spring-boot-apps'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['host.docker.internal:8083', 'host.docker.internal:8085']
+```
+Here
+- host.docker.internal:8083 -> transaction-service
+- host.docker.internal:8085 -> fraud-service
+
+##### Health check for both services in prometheus
+```bash
+http://localhost:9090/targets
+```
+- Now open grafana
+```bash
+http://localhost:3000/
+```
+Go to Data Sources from left side panel, Then add the prometheus url like bellow.
+```bash
+http://prometheus:9090
+```
+To import dashboard checkout this
+```bash
+https://github.com/mrafiq709/spring-boot/tree/prometheus-grafana
+```
+For kafka Dashboard I have edited query because others are not working
+- [Kafka Exporter Dashboard](./docs/Kafka%20Exporter%20Overview-1758267773264.json)
 ## TODO
 
 -   Write clean README.md (setup instructions, tech stack, screenshots).
--   Add Swagger/OpenAPI docs for APIs.
 -   Use Docker Compose to spin up the whole system.
 -   Deploy a live demo on AWS/GCP/Heroku.
--   Include unit + integration tests (JUnit, Testcontainers).
+-   Include unit + integration tests (JUnit, Test containers).
 -   Add GitHub Actions CI/CD pipeline.
