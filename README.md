@@ -145,13 +145,13 @@ Update pom.xml [fraud-service and transaction-service]
 - Update src/main/resources/properties.yml for both services
 ```yml
   management:
-  endpoints:
-    web:
-      exposure:
-        include: prometheus,health,info
-  endpoint:
-    prometheus:
-      enabled: true
+      endpoints:
+        web:
+          exposure:
+            include: prometheus,health,info
+      endpoint:
+        prometheus:
+          enabled: true
 ```
 
 - Put this in root folder where docker-compose.yml [prometheus.yml](./prometheus.yml)
@@ -187,6 +187,11 @@ https://github.com/mrafiq709/spring-boot/tree/prometheus-grafana
 ```
 For kafka Dashboard I have edited query because others are not working
 - [Kafka Exporter Dashboard](./docs/Kafka%20Exporter%20Overview-1758267773264.json)
+
+## Tracing with Zipkin
+- I have added zipkin in transaction-service [readme file](./transaction-service/README.md).
+## Kibana + Elasticsearch + Logstash
+- I have added Kibana + Elasticsearch + Logstash in transaction-service [readme file](./transaction-service/README.md).
 ## TODO
 
 -   Write clean README.md (setup instructions, tech stack, screenshots).

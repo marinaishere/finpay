@@ -110,15 +110,15 @@ Now hit: http://localhost:8083/swagger-ui/index.html
     <artifactId>zipkin-reporter-brave</artifactId>
 </dependency>
 
-<!-- Optional: export metrics to Prometheus too -->
-<dependency>
-    <groupId>io.micrometer</groupId>
-    <artifactId>micrometer-registry-prometheus</artifactId>
-</dependency> 
 ```
-Run docker container zipkin
-```bash
-docker run -d -p 9411:9411 openzipkin/zipkin
+## Tracing with Zipkin
+Update docker-compose.yml to add zipkin service
+```yml
+  zipkin:
+    image: openzipkin/zipkin
+    container_name: zipkin
+    ports:
+      - "9411:9411"
 ```
 - Update application.yml
 ```yml
@@ -141,7 +141,7 @@ public class TracingConfig {
     }
 }
 ```
-- Also Update common service pom.xm
+- Also Update common service pom.xml
 ```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
@@ -167,4 +167,99 @@ public class TracingConfig {
 </dependency> 
 ```
 - Then add [LoggingMdcFilter](./../common/src/main/java/com/finpay/common/logging/LoggingMdcFilter.java)
-TODO: user id is missing
+
+## Kibana + Elasticsearch + Logstash
+Update docker-compose.yml
+```yml
+      elasticsearch:
+      image: docker.elastic.co/elasticsearch/elasticsearch:8.10.2
+      container_name: elasticsearch
+      environment:
+        - discovery.type=single-node
+        - xpack.security.enabled=false
+        - ES_JAVA_OPTS=-Xms512m -Xmx512m
+      ports:
+        - "9200:9200"
+        - "9300:9300"
+      volumes:
+        - elasticsearch_data:/usr/share/elasticsearch/data
+
+      kibana:
+        image: docker.elastic.co/kibana/kibana:8.10.2
+        container_name: kibana
+        environment:
+          - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+        ports:
+          - "5601:5601"
+        depends_on:
+          - elasticsearch
+
+      logstash:
+        image: docker.elastic.co/logstash/logstash:8.10.2
+        container_name: logstash
+        ports:
+          - "5001:5000"
+        volumes:
+          - ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+        depends_on:
+          - elasticsearch
+```
+- Add logstash.conf in root folder where docker-compose.yml
+```bash
+input {
+  tcp {
+    port => 5000
+    codec => json_lines
+  }
+}
+
+output {
+  elasticsearch {
+    hosts => ["http://elasticsearch:9200"]
+    index => "transaction-service-logs-%{+YYYY.MM.dd}"
+  }
+}
+
+```
+- Update application.yml
+```yml
+logging:
+  pattern:
+    level: "%5p [traceId=%X{traceId}, spanId=%X{spanId}, user=%X{userId}]"
+```
+- Add logback-spring.xml in src/main/resources
+```xml
+<configuration>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+        <destination>localhost:5001</destination>
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder" />
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="LOGSTASH"/>
+    </root>
+
+</configuration>
+
+```
+```bash
+docker-compose up -d
+mvn clean install
+mvn spring-boot:run
+```
+- can see the list of indexes
+```bash
+http://localhost:9200/_cat/indices?v
+```
+Now hit: http://localhost:5601 to see logs in Kibana
+Go to Stack Management -> Index Management -> Create index pattern
+Put transaction-service-logs-* and click next step, then create index pattern.
+Then go to Discover from left side panel, you will see the logs.
