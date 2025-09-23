@@ -91,15 +91,13 @@ public class TransactionService {
 
     @Transactional
     private TransactionResponse processAndSave(Transaction tx, TransferRequest request) {
-
-        FraudCheckResponse fraud = fraudClient.checkFraud(new FraudCheckRequest(tx.getId(), request.getAmount()));
-        if (fraud.isFraudulent()) {
-            tx.setStatus(Transaction.Status.FAILED);
-            repository.save(tx);
-            throw new IllegalStateException("Transaction flagged as fraud: " + fraud.getReason());
-        }
-
         AccountDto accDto = accountClient.getAccount(request.getFromAccountId());
+        transactionProducer.sendTransaction(new TransactionCreatedEvent(
+                tx.getId(),
+                tx.getAmount(),
+                accDto.getOwnerEmail()
+        ));
+
         try {
             log.info("Debiting account={} amount={}", tx.getFromAccountId(), tx.getAmount());
             accountClient.debit(new DebitRequest(tx.getFromAccountId(), tx.getAmount()));
@@ -118,11 +116,6 @@ public class TransactionService {
                     .build()
             );
 
-            transactionProducer.sendTransaction(new TransactionCreatedEvent(
-                    tx.getId(),
-                    tx.getAmount(),
-                    accDto.getOwnerEmail()
-            ));
         } catch (Exception e) {
             tx.setStatus(Transaction.Status.FAILED);
             log.error("Transaction failed id={} | key={} | reason={}",
