@@ -1,0 +1,109 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.finpay:auth-service >-----------------------
+[INFO] Building Auth Service 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Parameter 'release' is unknown for plugin 'spring-boot-maven-plugin:3.2.5:run (default-cli)'
+[INFO] 
+[INFO] >>> spring-boot:3.2.5:run (default-cli) > test-compile @ auth-service >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ auth-service ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 3 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ auth-service ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ auth-service ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /Users/mengruwang/Github/finpay/auth-service/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ auth-service ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:3.2.5:run (default-cli) < test-compile @ auth-service <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.2.5:run (default-cli) @ auth-service ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2025-10-22T00:46:48.326-05:00  INFO 54615 --- [auth-service] [  restartedMain] [                                                 ] c.f.authservice.AuthServiceApplication   : Starting AuthServiceApplication using Java 21.0.7 with PID 54615 (/Users/mengruwang/Github/finpay/auth-service/target/classes started by mengruwang in /Users/mengruwang/Github/finpay/auth-service)
+2025-10-22T00:46:48.329-05:00  INFO 54615 --- [auth-service] [  restartedMain] [                                                 ] c.f.authservice.AuthServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-22T00:46:48.354-05:00  INFO 54615 --- [auth-service] [  restartedMain] [                                                 ] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-22T00:46:48.354-05:00  INFO 54615 --- [auth-service] [  restartedMain] [                                                 ] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-22T00:46:49.115-05:00  INFO 54615 --- [auth-service] [  restartedMain] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-22T00:46:49.142-05:00  INFO 54615 --- [auth-service] [  restartedMain] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 3 JPA repository interfaces.
+2025-10-22T00:46:49.646-05:00  INFO 54615 --- [auth-service] [  restartedMain] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-10-22T00:46:49.653-05:00  INFO 54615 --- [auth-service] [  restartedMain] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-22T00:46:49.654-05:00  INFO 54615 --- [auth-service] [  restartedMain] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-10-22T00:46:49.751-05:00  INFO 54615 --- [auth-service] [  restartedMain] [                                                 ] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-10-22T00:46:49.753-05:00  INFO 54615 --- [auth-service] [  restartedMain] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-22T00:46:49.754-05:00  INFO 54615 --- [auth-service] [  restartedMain] [                                                 ] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1400 ms
+2025-10-22T00:46:49.982-05:00  INFO 54615 --- [auth-service] [  restartedMain] [                                                 ] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-22T00:46:50.022-05:00  INFO 54615 --- [auth-service] [  restartedMain] [                                                 ] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-10-22T00:46:50.039-05:00  INFO 54615 --- [auth-service] [  restartedMain] [                                                 ] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-22T00:46:50.161-05:00  INFO 54615 --- [auth-service] [  restartedMain] [                                                 ] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-22T00:46:50.178-05:00  INFO 54615 --- [auth-service] [  restartedMain] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-22T00:46:50.340-05:00  INFO 54615 --- [auth-service] [  restartedMain] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@27a082ba
+2025-10-22T00:46:50.341-05:00  INFO 54615 --- [auth-service] [  restartedMain] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-22T00:46:50.397-05:00  WARN 54615 --- [auth-service] [  restartedMain] [                                                 ] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-22T00:46:50.960-05:00  INFO 54615 --- [auth-service] [  restartedMain] [                                                 ] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-22T00:46:51.051-05:00  INFO 54615 --- [auth-service] [  restartedMain] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-22T00:46:51.317-05:00  WARN 54615 --- [auth-service] [  restartedMain] [                                                 ] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-22T00:46:51.703-05:00  INFO 54615 --- [auth-service] [  restartedMain] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-10-22T00:46:51.755-05:00  INFO 54615 --- [auth-service] [  restartedMain] [                                                 ] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4b9f0aa, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6dd7a244, org.springframework.security.web.context.SecurityContextHolderFilter@3c6994b9, org.springframework.security.web.header.HeaderWriterFilter@55fca023, org.springframework.web.filter.CorsFilter@463885fb, org.springframework.security.web.authentication.logout.LogoutFilter@7d4bc051, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@356b7152, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4bc5198f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@282cd3ea, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1801ebc4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1bb9c4e6, org.springframework.security.web.session.SessionManagementFilter@1057356b, org.springframework.security.web.access.ExceptionTranslationFilter@5c22c25d, org.springframework.security.web.access.intercept.AuthorizationFilter@3ad7b6dd]
+2025-10-22T00:46:52.129-05:00  INFO 54615 --- [auth-service] [  restartedMain] [                                                 ] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-22T00:46:52.181-05:00  INFO 54615 --- [auth-service] [  restartedMain] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path ''
+2025-10-22T00:46:52.190-05:00  INFO 54615 --- [auth-service] [  restartedMain] [                                                 ] c.f.authservice.AuthServiceApplication   : Started AuthServiceApplication in 4.105 seconds (process running for 4.419)
+Hibernate: select r1_0.id,r1_0.role_name from roles r1_0 where r1_0.role_name=?
+Hibernate: select r1_0.id,r1_0.role_name from roles r1_0 where r1_0.role_name=?
+2025-10-22T01:32:13.796-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m49s303ms).
+2025-10-22T03:08:55.234-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m40s162ms).
+2025-10-22T04:25:58.717-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m32s590ms).
+2025-10-22T04:44:13.895-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m15s96ms).
+2025-10-22T05:00:42.065-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m58s143ms).
+2025-10-22T05:17:53.041-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m10s973ms).
+2025-10-22T06:39:27.120-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m33s232ms).
+2025-10-22T06:51:39.646-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m42s491ms).
+2025-10-22T06:55:22.073-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m58s709ms).
+2025-10-22T07:12:01.518-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m39s446ms).
+2025-10-22T07:15:23.921-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m38s888ms).
+2025-10-22T07:32:26.958-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m3s37ms).
+2025-10-22T07:48:37.365-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m40s384ms).
+2025-10-22T09:00:25.305-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m16s968ms).
+2025-10-22T09:01:21.125-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55s836ms).
+2025-10-22T09:13:13.515-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m22s377ms).
+2025-10-22T09:30:59.066-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m15s537ms).
+2025-10-22T09:47:52.562-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m23s504ms).
+2025-10-22T11:06:56.395-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m2s890ms).
+2025-10-22T12:53:36.570-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m8s869ms).
+2025-10-22T13:10:18.580-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m11s822ms).
+2025-10-22T13:12:20.420-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55s453ms).
+2025-10-22T13:29:41.898-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m51s470ms).
+2025-10-22T13:39:32.117-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m20s200ms).
+2025-10-22T13:56:45.953-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m13s833ms).
+2025-10-22T14:14:03.134-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m47s182ms).
+2025-10-22T14:31:34.554-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m1s398ms).
+2025-10-22T14:47:18.022-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m43s463ms).
+2025-10-22T15:03:25.402-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m37s350ms).
+2025-10-22T16:15:17.290-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m21s30ms).
+2025-10-22T16:21:01.951-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m14s627ms).
+2025-10-22T17:31:56.133-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m53s508ms).
+2025-10-22T17:41:24.936-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m58s723ms).
+2025-10-22T18:28:23.273-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m27s971ms).
+2025-10-22T18:43:51.870-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m28s632ms).
+2025-10-22T18:59:50.906-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m28s908ms).
+2025-10-22T19:16:13.390-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m52s478ms).
+2025-10-22T19:32:57.693-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m14s297ms).
+2025-10-22T19:54:13.513-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m45s743ms).
+2025-10-22T20:12:36.454-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m52s925ms).
+2025-10-22T20:32:47.098-05:00  WARN 54615 --- [auth-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m40s560ms).

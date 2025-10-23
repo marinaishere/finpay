@@ -1,0 +1,326 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.finpay:transaction-service >-------------------
+[INFO] Building Transaction Service 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Parameter 'release' is unknown for plugin 'spring-boot-maven-plugin:3.2.5:run (default-cli)'
+[INFO] 
+[INFO] >>> spring-boot:3.2.5:run (default-cli) > test-compile @ transaction-service >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ transaction-service ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 3 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ transaction-service ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ transaction-service ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /Users/mengruwang/Github/finpay/transaction-service/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ transaction-service ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:3.2.5:run (default-cli) < test-compile @ transaction-service <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.2.5:run (default-cli) @ transaction-service ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2025-10-22 00:46:59 INFO  [restartedMain] c.f.t.TransactionServiceApplication - Starting TransactionServiceApplication using Java 21.0.7 with PID 54753 (/Users/mengruwang/Github/finpay/transaction-service/target/classes started by mengruwang in /Users/mengruwang/Github/finpay/transaction-service)
+2025-10-22 00:46:59 INFO  [restartedMain] c.f.t.TransactionServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-22 00:46:59 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-22 00:46:59 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-22 00:46:59 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-22 00:46:59 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 1 JPA repository interface.
+2025-10-22 00:46:59 INFO  [restartedMain] o.s.cloud.context.scope.GenericScope - BeanFactory id=ab2c551e-a432-38c5-b20f-fb0dcbd384ef
+2025-10-22 00:47:00 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8083 (http)
+2025-10-22 00:47:00 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8083"]
+2025-10-22 00:47:00 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-22 00:47:00 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-10-22 00:47:00 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-22 00:47:00 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 823 ms
+2025-10-22 00:47:00 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-22 00:47:00 INFO  [restartedMain] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-10-22 00:47:00 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-22 00:47:00 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-22 00:47:00 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-22 00:47:00 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@723dbc93
+2025-10-22 00:47:00 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-22 00:47:00 WARN  [restartedMain] org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-22 00:47:00 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-22 00:47:00 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-22 00:47:01 INFO  [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-22 00:47:01 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-22 00:47:01 WARN  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2025-10-22 00:47:01 INFO  [restartedMain] o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoint(s) beneath base path '/actuator'
+2025-10-22 00:47:01 INFO  [restartedMain] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5bbb49b1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@20f1138a, org.springframework.security.web.context.SecurityContextHolderFilter@57563f04, org.springframework.security.web.header.HeaderWriterFilter@404d9c5e, org.springframework.web.filter.CorsFilter@1c0ac573, org.springframework.security.web.authentication.logout.LogoutFilter@691c4973, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@6535fb65, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@34e6134c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1b74735, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@76ce2e10, org.springframework.security.web.access.ExceptionTranslationFilter@602e6787, org.springframework.security.web.access.intercept.AuthorizationFilter@77a326f]
+2025-10-22 00:47:01 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8083"]
+2025-10-22 00:47:01 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8083 (http) with context path ''
+2025-10-22 00:47:01 INFO  [restartedMain] c.f.t.TransactionServiceApplication - Started TransactionServiceApplication in 2.681 seconds (process running for 2.843)
+2025-10-22 00:47:06 INFO  [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-22 00:47:06 INFO  [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-10-22 00:47:06 INFO  [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-10-22 00:47:20 INFO  [http-nio-8083-exec-4] c.f.t.services.TransactionService - Processing transfer request | key=test5 | from=178fb08b-055c-4bff-b280-4a365000fd6d | to=d97e8c8d-ad8f-4b34-9694-9d17da8bab9a | amount=10
+Hibernate: select t1_0.id,t1_0.amount,t1_0.created_at,t1_0.from_account_id,t1_0.idempotency_key,t1_0.status,t1_0.to_account_id from transactions t1_0 where t1_0.idempotency_key=?
+2025-10-22 00:47:20 INFO  [http-nio-8083-exec-4] c.f.t.services.TransactionService - Found existing transaction | key=test5 | status=COMPLETED
+2025-10-22 00:47:20 INFO  [http-nio-8083-exec-4] c.f.t.services.TransactionService - Returning existing transaction | key=test5 | status=COMPLETED
+2025-10-22 00:47:21 INFO  [http-nio-8083-exec-6] c.f.t.services.TransactionService - Processing transfer request | key=test5 | from=178fb08b-055c-4bff-b280-4a365000fd6d | to=d97e8c8d-ad8f-4b34-9694-9d17da8bab9a | amount=10
+Hibernate: select t1_0.id,t1_0.amount,t1_0.created_at,t1_0.from_account_id,t1_0.idempotency_key,t1_0.status,t1_0.to_account_id from transactions t1_0 where t1_0.idempotency_key=?
+2025-10-22 00:47:21 INFO  [http-nio-8083-exec-6] c.f.t.services.TransactionService - Found existing transaction | key=test5 | status=COMPLETED
+2025-10-22 00:47:21 INFO  [http-nio-8083-exec-6] c.f.t.services.TransactionService - Returning existing transaction | key=test5 | status=COMPLETED
+2025-10-22 00:47:35 INFO  [http-nio-8083-exec-9] c.f.t.services.TransactionService - Processing transfer request | key=test6 | from=178fb08b-055c-4bff-b280-4a365000fd6d | to=d97e8c8d-ad8f-4b34-9694-9d17da8bab9a | amount=10
+Hibernate: select t1_0.id,t1_0.amount,t1_0.created_at,t1_0.from_account_id,t1_0.idempotency_key,t1_0.status,t1_0.to_account_id from transactions t1_0 where t1_0.idempotency_key=?
+2025-10-22 00:47:35 INFO  [http-nio-8083-exec-9] c.f.t.services.TransactionService - Creating new transaction | key=test6
+2025-10-22 00:47:35 INFO  [http-nio-8083-exec-9] o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2025-10-22 00:47:35 INFO  [http-nio-8083-exec-9] o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-10-22 00:47:36 INFO  [http-nio-8083-exec-9] o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.6.2
+2025-10-22 00:47:36 INFO  [http-nio-8083-exec-9] o.a.kafka.common.utils.AppInfoParser - Kafka commitId: c4deed513057c94e
+2025-10-22 00:47:36 INFO  [http-nio-8083-exec-9] o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1761112056014
+2025-10-22 00:47:36 INFO  [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: vgE0UVI5R8-fzafUJnA4MA
+2025-10-22 00:47:36 INFO  [http-nio-8083-exec-9] c.f.t.services.TransactionService - Debiting account=178fb08b-055c-4bff-b280-4a365000fd6d amount=10
+2025-10-22 00:47:36 INFO  [http-nio-8083-exec-9] c.f.t.services.TransactionService - Crediting account=d97e8c8d-ad8f-4b34-9694-9d17da8bab9a amount=10
+2025-10-22 00:47:36 INFO  [http-nio-8083-exec-9] c.f.t.services.TransactionService - Transaction completed id=de822f73-2f9d-4519-9d82-30a5cd58492e | key=test6
+2025-10-22 00:47:36 INFO  [kafka-producer-network-thread | producer-1] o.a.k.c.p.i.TransactionManager - [Producer clientId=producer-1] ProducerId set to 1000 with epoch 0
+Hibernate: insert into transactions (amount,created_at,from_account_id,idempotency_key,status,to_account_id,id) values (?,?,?,?,?,?,?)
+Hibernate: update transactions set amount=?,created_at=?,from_account_id=?,idempotency_key=?,status=?,to_account_id=? where id=?
+2025-10-22 00:47:39 INFO  [http-nio-8083-exec-1] c.f.t.services.TransactionService - Processing transfer request | key=test6 | from=178fb08b-055c-4bff-b280-4a365000fd6d | to=d97e8c8d-ad8f-4b34-9694-9d17da8bab9a | amount=10
+Hibernate: select t1_0.id,t1_0.amount,t1_0.created_at,t1_0.from_account_id,t1_0.idempotency_key,t1_0.status,t1_0.to_account_id from transactions t1_0 where t1_0.idempotency_key=?
+2025-10-22 00:47:39 INFO  [http-nio-8083-exec-1] c.f.t.services.TransactionService - Found existing transaction | key=test6 | status=COMPLETED
+2025-10-22 00:47:39 INFO  [http-nio-8083-exec-1] c.f.t.services.TransactionService - Returning existing transaction | key=test6 | status=COMPLETED
+2025-10-22 00:47:40 INFO  [http-nio-8083-exec-2] c.f.t.services.TransactionService - Processing transfer request | key=test6 | from=178fb08b-055c-4bff-b280-4a365000fd6d | to=d97e8c8d-ad8f-4b34-9694-9d17da8bab9a | amount=10
+Hibernate: select t1_0.id,t1_0.amount,t1_0.created_at,t1_0.from_account_id,t1_0.idempotency_key,t1_0.status,t1_0.to_account_id from transactions t1_0 where t1_0.idempotency_key=?
+2025-10-22 00:47:40 INFO  [http-nio-8083-exec-2] c.f.t.services.TransactionService - Found existing transaction | key=test6 | status=COMPLETED
+2025-10-22 00:47:40 INFO  [http-nio-8083-exec-2] c.f.t.services.TransactionService - Returning existing transaction | key=test6 | status=COMPLETED
+2025-10-22 00:47:40 INFO  [http-nio-8083-exec-3] c.f.t.services.TransactionService - Processing transfer request | key=test6 | from=178fb08b-055c-4bff-b280-4a365000fd6d | to=d97e8c8d-ad8f-4b34-9694-9d17da8bab9a | amount=10
+Hibernate: select t1_0.id,t1_0.amount,t1_0.created_at,t1_0.from_account_id,t1_0.idempotency_key,t1_0.status,t1_0.to_account_id from transactions t1_0 where t1_0.idempotency_key=?
+2025-10-22 00:47:40 INFO  [http-nio-8083-exec-3] c.f.t.services.TransactionService - Found existing transaction | key=test6 | status=COMPLETED
+2025-10-22 00:47:40 INFO  [http-nio-8083-exec-3] c.f.t.services.TransactionService - Returning existing transaction | key=test6 | status=COMPLETED
+2025-10-22 00:47:40 INFO  [http-nio-8083-exec-4] c.f.t.services.TransactionService - Processing transfer request | key=test6 | from=178fb08b-055c-4bff-b280-4a365000fd6d | to=d97e8c8d-ad8f-4b34-9694-9d17da8bab9a | amount=10
+Hibernate: select t1_0.id,t1_0.amount,t1_0.created_at,t1_0.from_account_id,t1_0.idempotency_key,t1_0.status,t1_0.to_account_id from transactions t1_0 where t1_0.idempotency_key=?
+2025-10-22 00:47:40 INFO  [http-nio-8083-exec-4] c.f.t.services.TransactionService - Found existing transaction | key=test6 | status=COMPLETED
+2025-10-22 00:47:40 INFO  [http-nio-8083-exec-4] c.f.t.services.TransactionService - Returning existing transaction | key=test6 | status=COMPLETED
+2025-10-22 00:47:40 INFO  [http-nio-8083-exec-5] c.f.t.services.TransactionService - Processing transfer request | key=test6 | from=178fb08b-055c-4bff-b280-4a365000fd6d | to=d97e8c8d-ad8f-4b34-9694-9d17da8bab9a | amount=10
+Hibernate: select t1_0.id,t1_0.amount,t1_0.created_at,t1_0.from_account_id,t1_0.idempotency_key,t1_0.status,t1_0.to_account_id from transactions t1_0 where t1_0.idempotency_key=?
+2025-10-22 00:47:40 INFO  [http-nio-8083-exec-5] c.f.t.services.TransactionService - Found existing transaction | key=test6 | status=COMPLETED
+2025-10-22 00:47:40 INFO  [http-nio-8083-exec-5] c.f.t.services.TransactionService - Returning existing transaction | key=test6 | status=COMPLETED
+2025-10-22 00:47:40 INFO  [http-nio-8083-exec-6] c.f.t.services.TransactionService - Processing transfer request | key=test6 | from=178fb08b-055c-4bff-b280-4a365000fd6d | to=d97e8c8d-ad8f-4b34-9694-9d17da8bab9a | amount=10
+Hibernate: select t1_0.id,t1_0.amount,t1_0.created_at,t1_0.from_account_id,t1_0.idempotency_key,t1_0.status,t1_0.to_account_id from transactions t1_0 where t1_0.idempotency_key=?
+2025-10-22 00:47:40 INFO  [http-nio-8083-exec-6] c.f.t.services.TransactionService - Found existing transaction | key=test6 | status=COMPLETED
+2025-10-22 00:47:40 INFO  [http-nio-8083-exec-6] c.f.t.services.TransactionService - Returning existing transaction | key=test6 | status=COMPLETED
+2025-10-22 00:47:41 INFO  [http-nio-8083-exec-8] c.f.t.services.TransactionService - Processing transfer request | key=test6 | from=178fb08b-055c-4bff-b280-4a365000fd6d | to=d97e8c8d-ad8f-4b34-9694-9d17da8bab9a | amount=10
+Hibernate: select t1_0.id,t1_0.amount,t1_0.created_at,t1_0.from_account_id,t1_0.idempotency_key,t1_0.status,t1_0.to_account_id from transactions t1_0 where t1_0.idempotency_key=?
+2025-10-22 00:47:41 INFO  [http-nio-8083-exec-8] c.f.t.services.TransactionService - Found existing transaction | key=test6 | status=COMPLETED
+2025-10-22 00:47:41 INFO  [http-nio-8083-exec-8] c.f.t.services.TransactionService - Returning existing transaction | key=test6 | status=COMPLETED
+2025-10-22 00:47:42 INFO  [http-nio-8083-exec-10] c.f.t.services.TransactionService - Processing transfer request | key=test6 | from=178fb08b-055c-4bff-b280-4a365000fd6d | to=d97e8c8d-ad8f-4b34-9694-9d17da8bab9a | amount=10
+Hibernate: select t1_0.id,t1_0.amount,t1_0.created_at,t1_0.from_account_id,t1_0.idempotency_key,t1_0.status,t1_0.to_account_id from transactions t1_0 where t1_0.idempotency_key=?
+2025-10-22 00:47:42 INFO  [http-nio-8083-exec-10] c.f.t.services.TransactionService - Found existing transaction | key=test6 | status=COMPLETED
+2025-10-22 00:47:42 INFO  [http-nio-8083-exec-10] c.f.t.services.TransactionService - Returning existing transaction | key=test6 | status=COMPLETED
+2025-10-22 00:47:42 INFO  [http-nio-8083-exec-9] c.f.t.services.TransactionService - Processing transfer request | key=test6 | from=178fb08b-055c-4bff-b280-4a365000fd6d | to=d97e8c8d-ad8f-4b34-9694-9d17da8bab9a | amount=10
+Hibernate: select t1_0.id,t1_0.amount,t1_0.created_at,t1_0.from_account_id,t1_0.idempotency_key,t1_0.status,t1_0.to_account_id from transactions t1_0 where t1_0.idempotency_key=?
+2025-10-22 00:47:42 INFO  [http-nio-8083-exec-9] c.f.t.services.TransactionService - Found existing transaction | key=test6 | status=COMPLETED
+2025-10-22 00:47:42 INFO  [http-nio-8083-exec-9] c.f.t.services.TransactionService - Returning existing transaction | key=test6 | status=COMPLETED
+2025-10-22 00:47:42 INFO  [http-nio-8083-exec-1] c.f.t.services.TransactionService - Processing transfer request | key=test6 | from=178fb08b-055c-4bff-b280-4a365000fd6d | to=d97e8c8d-ad8f-4b34-9694-9d17da8bab9a | amount=10
+Hibernate: select t1_0.id,t1_0.amount,t1_0.created_at,t1_0.from_account_id,t1_0.idempotency_key,t1_0.status,t1_0.to_account_id from transactions t1_0 where t1_0.idempotency_key=?
+2025-10-22 00:47:42 INFO  [http-nio-8083-exec-1] c.f.t.services.TransactionService - Found existing transaction | key=test6 | status=COMPLETED
+2025-10-22 00:47:42 INFO  [http-nio-8083-exec-1] c.f.t.services.TransactionService - Returning existing transaction | key=test6 | status=COMPLETED
+2025-10-22 00:47:42 INFO  [http-nio-8083-exec-2] c.f.t.services.TransactionService - Processing transfer request | key=test6 | from=178fb08b-055c-4bff-b280-4a365000fd6d | to=d97e8c8d-ad8f-4b34-9694-9d17da8bab9a | amount=10
+Hibernate: select t1_0.id,t1_0.amount,t1_0.created_at,t1_0.from_account_id,t1_0.idempotency_key,t1_0.status,t1_0.to_account_id from transactions t1_0 where t1_0.idempotency_key=?
+2025-10-22 00:47:42 INFO  [http-nio-8083-exec-2] c.f.t.services.TransactionService - Found existing transaction | key=test6 | status=COMPLETED
+2025-10-22 00:47:42 INFO  [http-nio-8083-exec-2] c.f.t.services.TransactionService - Returning existing transaction | key=test6 | status=COMPLETED
+2025-10-22 00:47:42 INFO  [http-nio-8083-exec-3] c.f.t.services.TransactionService - Processing transfer request | key=test6 | from=178fb08b-055c-4bff-b280-4a365000fd6d | to=d97e8c8d-ad8f-4b34-9694-9d17da8bab9a | amount=10
+Hibernate: select t1_0.id,t1_0.amount,t1_0.created_at,t1_0.from_account_id,t1_0.idempotency_key,t1_0.status,t1_0.to_account_id from transactions t1_0 where t1_0.idempotency_key=?
+2025-10-22 00:47:42 INFO  [http-nio-8083-exec-3] c.f.t.services.TransactionService - Found existing transaction | key=test6 | status=COMPLETED
+2025-10-22 00:47:42 INFO  [http-nio-8083-exec-3] c.f.t.services.TransactionService - Returning existing transaction | key=test6 | status=COMPLETED
+2025-10-22 00:48:07 INFO  [http-nio-8083-exec-10] c.f.t.services.TransactionService - Processing transfer request | key=test7 | from=178fb08b-055c-4bff-b280-4a365000fd6d | to=d97e8c8d-ad8f-4b34-9694-9d17da8bab9a | amount=10
+Hibernate: select t1_0.id,t1_0.amount,t1_0.created_at,t1_0.from_account_id,t1_0.idempotency_key,t1_0.status,t1_0.to_account_id from transactions t1_0 where t1_0.idempotency_key=?
+2025-10-22 00:48:07 INFO  [http-nio-8083-exec-10] c.f.t.services.TransactionService - Creating new transaction | key=test7
+2025-10-22 00:48:07 INFO  [http-nio-8083-exec-10] c.f.t.services.TransactionService - Debiting account=178fb08b-055c-4bff-b280-4a365000fd6d amount=10
+2025-10-22 00:48:07 INFO  [http-nio-8083-exec-10] c.f.t.services.TransactionService - Crediting account=d97e8c8d-ad8f-4b34-9694-9d17da8bab9a amount=10
+2025-10-22 00:48:07 INFO  [http-nio-8083-exec-10] c.f.t.services.TransactionService - Transaction completed id=51d84d45-ed9a-4537-b4da-8980715ae555 | key=test7
+Hibernate: insert into transactions (amount,created_at,from_account_id,idempotency_key,status,to_account_id,id) values (?,?,?,?,?,?,?)
+Hibernate: update transactions set amount=?,created_at=?,from_account_id=?,idempotency_key=?,status=?,to_account_id=? where id=?
+2025-10-22 00:48:13 INFO  [http-nio-8083-exec-1] c.f.t.services.TransactionService - Processing transfer request | key=test8 | from=178fb08b-055c-4bff-b280-4a365000fd6d | to=d97e8c8d-ad8f-4b34-9694-9d17da8bab9a | amount=10
+Hibernate: select t1_0.id,t1_0.amount,t1_0.created_at,t1_0.from_account_id,t1_0.idempotency_key,t1_0.status,t1_0.to_account_id from transactions t1_0 where t1_0.idempotency_key=?
+2025-10-22 00:48:13 INFO  [http-nio-8083-exec-1] c.f.t.services.TransactionService - Creating new transaction | key=test8
+2025-10-22 00:48:13 INFO  [http-nio-8083-exec-1] c.f.t.services.TransactionService - Debiting account=178fb08b-055c-4bff-b280-4a365000fd6d amount=10
+2025-10-22 00:48:13 INFO  [http-nio-8083-exec-1] c.f.t.services.TransactionService - Crediting account=d97e8c8d-ad8f-4b34-9694-9d17da8bab9a amount=10
+2025-10-22 00:48:13 INFO  [http-nio-8083-exec-1] c.f.t.services.TransactionService - Transaction completed id=08037298-4751-4b46-bf0d-baf461127e16 | key=test8
+Hibernate: insert into transactions (amount,created_at,from_account_id,idempotency_key,status,to_account_id,id) values (?,?,?,?,?,?,?)
+Hibernate: update transactions set amount=?,created_at=?,from_account_id=?,idempotency_key=?,status=?,to_account_id=? where id=?
+2025-10-22 00:48:16 INFO  [http-nio-8083-exec-3] c.f.t.services.TransactionService - Processing transfer request | key=test8 | from=178fb08b-055c-4bff-b280-4a365000fd6d | to=d97e8c8d-ad8f-4b34-9694-9d17da8bab9a | amount=10
+Hibernate: select t1_0.id,t1_0.amount,t1_0.created_at,t1_0.from_account_id,t1_0.idempotency_key,t1_0.status,t1_0.to_account_id from transactions t1_0 where t1_0.idempotency_key=?
+2025-10-22 00:48:16 INFO  [http-nio-8083-exec-3] c.f.t.services.TransactionService - Found existing transaction | key=test8 | status=COMPLETED
+2025-10-22 00:48:16 INFO  [http-nio-8083-exec-3] c.f.t.services.TransactionService - Returning existing transaction | key=test8 | status=COMPLETED
+2025-10-22 00:48:22 INFO  [http-nio-8083-exec-5] c.f.t.services.TransactionService - Processing transfer request | key=test9 | from=178fb08b-055c-4bff-b280-4a365000fd6d | to=d97e8c8d-ad8f-4b34-9694-9d17da8bab9a | amount=10
+Hibernate: select t1_0.id,t1_0.amount,t1_0.created_at,t1_0.from_account_id,t1_0.idempotency_key,t1_0.status,t1_0.to_account_id from transactions t1_0 where t1_0.idempotency_key=?
+2025-10-22 00:48:22 INFO  [http-nio-8083-exec-5] c.f.t.services.TransactionService - Creating new transaction | key=test9
+2025-10-22 00:48:22 INFO  [http-nio-8083-exec-5] c.f.t.services.TransactionService - Debiting account=178fb08b-055c-4bff-b280-4a365000fd6d amount=10
+2025-10-22 00:48:22 INFO  [http-nio-8083-exec-5] c.f.t.services.TransactionService - Crediting account=d97e8c8d-ad8f-4b34-9694-9d17da8bab9a amount=10
+2025-10-22 00:48:22 INFO  [http-nio-8083-exec-5] c.f.t.services.TransactionService - Transaction completed id=7997e54b-2de9-4221-b505-bd7211892dc4 | key=test9
+Hibernate: insert into transactions (amount,created_at,from_account_id,idempotency_key,status,to_account_id,id) values (?,?,?,?,?,?,?)
+Hibernate: update transactions set amount=?,created_at=?,from_account_id=?,idempotency_key=?,status=?,to_account_id=? where id=?
+2025-10-22 00:48:30 INFO  [http-nio-8083-exec-7] c.f.t.services.TransactionService - Processing transfer request | key=test10 | from=178fb08b-055c-4bff-b280-4a365000fd6d | to=d97e8c8d-ad8f-4b34-9694-9d17da8bab9a | amount=10
+Hibernate: select t1_0.id,t1_0.amount,t1_0.created_at,t1_0.from_account_id,t1_0.idempotency_key,t1_0.status,t1_0.to_account_id from transactions t1_0 where t1_0.idempotency_key=?
+2025-10-22 00:48:30 INFO  [http-nio-8083-exec-7] c.f.t.services.TransactionService - Creating new transaction | key=test10
+2025-10-22 00:48:30 INFO  [http-nio-8083-exec-7] c.f.t.services.TransactionService - Debiting account=178fb08b-055c-4bff-b280-4a365000fd6d amount=10
+2025-10-22 00:48:30 INFO  [http-nio-8083-exec-7] c.f.t.services.TransactionService - Crediting account=d97e8c8d-ad8f-4b34-9694-9d17da8bab9a amount=10
+2025-10-22 00:48:30 INFO  [http-nio-8083-exec-7] c.f.t.services.TransactionService - Transaction completed id=c90eae33-a205-48c8-a707-c3cbf7625e6c | key=test10
+Hibernate: insert into transactions (amount,created_at,from_account_id,idempotency_key,status,to_account_id,id) values (?,?,?,?,?,?,?)
+Hibernate: update transactions set amount=?,created_at=?,from_account_id=?,idempotency_key=?,status=?,to_account_id=? where id=?
+2025-10-22 00:48:38 INFO  [http-nio-8083-exec-9] c.f.t.services.TransactionService - Processing transfer request | key=test11 | from=178fb08b-055c-4bff-b280-4a365000fd6d | to=d97e8c8d-ad8f-4b34-9694-9d17da8bab9a | amount=10
+Hibernate: select t1_0.id,t1_0.amount,t1_0.created_at,t1_0.from_account_id,t1_0.idempotency_key,t1_0.status,t1_0.to_account_id from transactions t1_0 where t1_0.idempotency_key=?
+2025-10-22 00:48:38 INFO  [http-nio-8083-exec-9] c.f.t.services.TransactionService - Creating new transaction | key=test11
+2025-10-22 00:48:38 INFO  [http-nio-8083-exec-9] c.f.t.services.TransactionService - Debiting account=178fb08b-055c-4bff-b280-4a365000fd6d amount=10
+2025-10-22 00:48:38 INFO  [http-nio-8083-exec-9] c.f.t.services.TransactionService - Crediting account=d97e8c8d-ad8f-4b34-9694-9d17da8bab9a amount=10
+2025-10-22 00:48:38 INFO  [http-nio-8083-exec-9] c.f.t.services.TransactionService - Transaction completed id=05c8ff0a-b43d-4861-8818-e91d1043803c | key=test11
+Hibernate: insert into transactions (amount,created_at,from_account_id,idempotency_key,status,to_account_id,id) values (?,?,?,?,?,?,?)
+Hibernate: update transactions set amount=?,created_at=?,from_account_id=?,idempotency_key=?,status=?,to_account_id=? where id=?
+2025-10-22 00:48:45 INFO  [http-nio-8083-exec-2] c.f.t.services.TransactionService - Processing transfer request | key=test12 | from=178fb08b-055c-4bff-b280-4a365000fd6d | to=d97e8c8d-ad8f-4b34-9694-9d17da8bab9a | amount=10
+Hibernate: select t1_0.id,t1_0.amount,t1_0.created_at,t1_0.from_account_id,t1_0.idempotency_key,t1_0.status,t1_0.to_account_id from transactions t1_0 where t1_0.idempotency_key=?
+2025-10-22 00:48:45 INFO  [http-nio-8083-exec-2] c.f.t.services.TransactionService - Creating new transaction | key=test12
+2025-10-22 00:48:45 INFO  [http-nio-8083-exec-2] c.f.t.services.TransactionService - Debiting account=178fb08b-055c-4bff-b280-4a365000fd6d amount=10
+2025-10-22 00:48:45 INFO  [http-nio-8083-exec-2] c.f.t.services.TransactionService - Crediting account=d97e8c8d-ad8f-4b34-9694-9d17da8bab9a amount=10
+2025-10-22 00:48:45 INFO  [http-nio-8083-exec-2] c.f.t.services.TransactionService - Transaction completed id=b34ac99d-6702-4405-9348-4d016d784f9c | key=test12
+Hibernate: insert into transactions (amount,created_at,from_account_id,idempotency_key,status,to_account_id,id) values (?,?,?,?,?,?,?)
+Hibernate: update transactions set amount=?,created_at=?,from_account_id=?,idempotency_key=?,status=?,to_account_id=? where id=?
+2025-10-22 00:56:36 INFO  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
+2025-10-22 01:31:54 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m49s328ms).
+2025-10-22 03:09:05 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m40s159ms).
+2025-10-22 04:26:08 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m32s588ms).
+2025-10-22 04:44:23 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m15s91ms).
+2025-10-22 05:00:21 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m58s160ms).
+2025-10-22 05:18:02 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m10s962ms).
+2025-10-22 06:39:36 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m33s236ms).
+2025-10-22 06:51:49 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m42s491ms).
+2025-10-22 06:55:01 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m58s717ms).
+2025-10-22 07:12:11 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m39s449ms).
+2025-10-22 07:15:33 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m38s888ms).
+2025-10-22 07:32:36 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m3s31ms).
+2025-10-22 07:48:47 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m40s385ms).
+2025-10-22 09:00:04 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m16s977ms).
+2025-10-22 09:01:30 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55s792ms).
+2025-10-22 09:13:23 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m22s375ms).
+2025-10-22 09:31:08 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m15s534ms).
+2025-10-22 09:47:32 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m23s485ms).
+2025-10-22 11:07:05 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m2s882ms).
+2025-10-22 12:53:45 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m8s889ms).
+2025-10-22 13:10:27 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m11s814ms).
+2025-10-22 13:12:29 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55s451ms).
+2025-10-22 13:29:21 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m51s461ms).
+2025-10-22 13:39:41 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m20s199ms).
+2025-10-22 13:56:55 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m13s832ms).
+2025-10-22 14:14:12 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m47s186ms).
+2025-10-22 14:31:13 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m1s418ms).
+2025-10-22 14:47:27 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m43s462ms).
+2025-10-22 15:03:34 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m37s344ms).
+2025-10-22 16:15:26 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m21s26ms).
+2025-10-22 16:21:11 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m14s615ms).
+2025-10-22 17:32:05 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m53s517ms).
+2025-10-22 17:41:03 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m58s763ms).
+2025-10-22 18:28:32 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m27s972ms).
+2025-10-22 18:44:00 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m28s306ms).
+2025-10-22 18:59:59 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m28s906ms).
+2025-10-22 19:16:21 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m52s468ms).
+2025-10-22 19:33:06 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m14s293ms).
+2025-10-22 19:54:22 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m45s742ms).
+2025-10-22 20:12:14 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m52s909ms).
+2025-10-22 20:32:55 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m40s566ms).

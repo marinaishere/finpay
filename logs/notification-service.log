@@ -1,0 +1,804 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.finpay:notification-service >-------------------
+[INFO] Building Notification Service 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Parameter 'release' is unknown for plugin 'spring-boot-maven-plugin:3.2.5:run (default-cli)'
+[INFO] 
+[INFO] >>> spring-boot:3.2.5:run (default-cli) > test-compile @ notification-service >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ notification-service ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ notification-service ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ notification-service ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /Users/mengruwang/Github/finpay/notification-service/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ notification-service ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:3.2.5:run (default-cli) < test-compile @ notification-service <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.2.5:run (default-cli) @ notification-service ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2025-10-22T00:47:05.320-05:00  INFO 54825 --- [notification-service] [  restartedMain] c.f.n.NotificationServiceApplication     : Starting NotificationServiceApplication using Java 21.0.7 with PID 54825 (/Users/mengruwang/Github/finpay/notification-service/target/classes started by mengruwang in /Users/mengruwang/Github/finpay/notification-service)
+2025-10-22T00:47:05.321-05:00  INFO 54825 --- [notification-service] [  restartedMain] c.f.n.NotificationServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-10-22T00:47:05.335-05:00  INFO 54825 --- [notification-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-22T00:47:05.335-05:00  INFO 54825 --- [notification-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-22T00:47:05.574-05:00  INFO 54825 --- [notification-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-22T00:47:05.597-05:00  INFO 54825 --- [notification-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 1 JPA repository interface.
+2025-10-22T00:47:05.806-05:00  INFO 54825 --- [notification-service] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8084 (http)
+2025-10-22T00:47:05.811-05:00  INFO 54825 --- [notification-service] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-22T00:47:05.811-05:00  INFO 54825 --- [notification-service] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-10-22T00:47:05.827-05:00  INFO 54825 --- [notification-service] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-22T00:47:05.827-05:00  INFO 54825 --- [notification-service] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 492 ms
+2025-10-22T00:47:05.882-05:00  INFO 54825 --- [notification-service] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-22T00:47:05.903-05:00  INFO 54825 --- [notification-service] [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-10-22T00:47:05.913-05:00  INFO 54825 --- [notification-service] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-22T00:47:05.993-05:00  INFO 54825 --- [notification-service] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-22T00:47:06.003-05:00  INFO 54825 --- [notification-service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-22T00:47:06.082-05:00  INFO 54825 --- [notification-service] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@83ce0fb
+2025-10-22T00:47:06.083-05:00  INFO 54825 --- [notification-service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-22T00:47:06.097-05:00  WARN 54825 --- [notification-service] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-22T00:47:06.394-05:00  INFO 54825 --- [notification-service] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-22T00:47:06.417-05:00  INFO 54825 --- [notification-service] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-22T00:47:06.592-05:00  WARN 54825 --- [notification-service] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-22T00:47:06.718-05:00  INFO 54825 --- [notification-service] [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@62d82c4c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5e74a06f, org.springframework.security.web.context.SecurityContextHolderFilter@137c0af5, org.springframework.security.web.header.HeaderWriterFilter@7dc345ef, org.springframework.web.filter.CorsFilter@62ebd727, org.springframework.security.web.authentication.logout.LogoutFilter@a8f4656, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@70998749, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5f5d414a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4fd75bda, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6eb5c5b1, org.springframework.security.web.access.ExceptionTranslationFilter@36f55d9, org.springframework.security.web.access.intercept.AuthorizationFilter@3d7359cd]
+2025-10-22T00:47:06.875-05:00  WARN 54825 --- [notification-service] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-10-22T00:47:06.903-05:00  INFO 54825 --- [notification-service] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8084 (http) with context path ''
+2025-10-22T00:47:06.925-05:00  INFO 54825 --- [notification-service] [  restartedMain] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-notification-service-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = notification-service-group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2025-10-22T00:47:06.996-05:00  INFO 54825 --- [notification-service] [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.2
+2025-10-22T00:47:06.996-05:00  INFO 54825 --- [notification-service] [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c4deed513057c94e
+2025-10-22T00:47:06.996-05:00  INFO 54825 --- [notification-service] [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1761112026996
+2025-10-22T00:47:06.998-05:00  INFO 54825 --- [notification-service] [  restartedMain] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Subscribed to topic(s): fraud-check
+2025-10-22T00:47:07.007-05:00  INFO 54825 --- [notification-service] [  restartedMain] c.f.n.NotificationServiceApplication     : Started NotificationServiceApplication in 1.804 seconds (process running for 1.952)
+2025-10-22T00:47:07.154-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Cluster ID: vgE0UVI5R8-fzafUJnA4MA
+2025-10-22T00:47:07.154-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T00:47:07.155-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] (Re-)joining group
+2025-10-22T00:47:07.169-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Request joining group due to: need to re-join with the given member-id: consumer-notification-service-group-1-6686e268-c88b-4690-9d3e-73f44a4434e6
+2025-10-22T00:47:07.169-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2025-10-22T00:47:07.169-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] (Re-)joining group
+2025-10-22T00:47:29.241-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Successfully joined group with generation Generation{generationId=2, memberId='consumer-notification-service-group-1-6686e268-c88b-4690-9d3e-73f44a4434e6', protocol='range'}
+2025-10-22T00:47:29.265-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Finished assignment for group at generation 2: {consumer-notification-service-group-1-6686e268-c88b-4690-9d3e-73f44a4434e6=Assignment(partitions=[fraud-check-0])}
+2025-10-22T00:47:29.300-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Successfully synced group in generation Generation{generationId=2, memberId='consumer-notification-service-group-1-6686e268-c88b-4690-9d3e-73f44a4434e6', protocol='range'}
+2025-10-22T00:47:29.300-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Notifying assignor about the new Assignment(partitions=[fraud-check-0])
+2025-10-22T00:47:29.306-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Adding newly assigned partitions: fraud-check-0
+2025-10-22T00:47:29.323-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Setting offset for partition fraud-check-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2025-10-22T00:47:29.324-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : notification-service-group: partitions assigned: [fraud-check-0]
+2025-10-22T00:47:36.271-05:00  INFO 54825 --- [notification-service] [nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-22T00:47:36.271-05:00  INFO 54825 --- [notification-service] [nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-22T00:47:36.273-05:00  INFO 54825 --- [notification-service] [nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+Hibernate: insert into notification (channel,message,status,user_id) values (?,?,?,?)
+Hibernate: insert into notification (channel,message,status,user_id) values (?,?,?,?)
+2025-10-22T00:48:14.571-05:00 ERROR 54825 --- [notification-service] [nio-8084-exec-3] c.f.n.services.NotificationService       : Failed to send notification
+
+org.springframework.mail.MailSendException: Failed messages: org.eclipse.angus.mail.smtp.SMTPSendFailedException: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:453) ~[spring-context-support-6.1.6.jar:6.1.6]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:317) ~[spring-context-support-6.1.6.jar:6.1.6]
+	at org.springframework.mail.MailSender.send(MailSender.java:42) ~[spring-context-support-6.1.6.jar:6.1.6]
+	at com.finpay.notifications.services.NotificationService.sendNotification(NotificationService.java:36) ~[classes/:na]
+	at com.finpay.notifications.controllers.NotificationController.create(NotificationController.java:21) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.20.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.20.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter.doFilterInternal(BearerTokenAuthenticationFilter.java:145) ~[spring-security-oauth2-resource-server-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+Hibernate: insert into notification (channel,message,status,user_id) values (?,?,?,?)
+Hibernate: insert into notification (channel,message,status,user_id) values (?,?,?,?)
+2025-10-22T00:48:31.023-05:00 ERROR 54825 --- [notification-service] [nio-8084-exec-5] c.f.n.services.NotificationService       : Failed to send notification
+
+org.springframework.mail.MailSendException: Failed messages: org.eclipse.angus.mail.smtp.SMTPSendFailedException: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:453) ~[spring-context-support-6.1.6.jar:6.1.6]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:317) ~[spring-context-support-6.1.6.jar:6.1.6]
+	at org.springframework.mail.MailSender.send(MailSender.java:42) ~[spring-context-support-6.1.6.jar:6.1.6]
+	at com.finpay.notifications.services.NotificationService.sendNotification(NotificationService.java:36) ~[classes/:na]
+	at com.finpay.notifications.controllers.NotificationController.create(NotificationController.java:21) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.20.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.20.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter.doFilterInternal(BearerTokenAuthenticationFilter.java:145) ~[spring-security-oauth2-resource-server-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+Hibernate: insert into notification (channel,message,status,user_id) values (?,?,?,?)
+Hibernate: insert into notification (channel,message,status,user_id) values (?,?,?,?)
+2025-10-22T00:48:46.253-05:00 ERROR 54825 --- [notification-service] [nio-8084-exec-7] c.f.n.services.NotificationService       : Failed to send notification
+
+org.springframework.mail.MailSendException: Failed messages: org.eclipse.angus.mail.smtp.SMTPSendFailedException: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:453) ~[spring-context-support-6.1.6.jar:6.1.6]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:317) ~[spring-context-support-6.1.6.jar:6.1.6]
+	at org.springframework.mail.MailSender.send(MailSender.java:42) ~[spring-context-support-6.1.6.jar:6.1.6]
+	at com.finpay.notifications.services.NotificationService.sendNotification(NotificationService.java:36) ~[classes/:na]
+	at com.finpay.notifications.controllers.NotificationController.create(NotificationController.java:21) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.20.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.20.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter.doFilterInternal(BearerTokenAuthenticationFilter.java:145) ~[spring-security-oauth2-resource-server-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+Hibernate: insert into notification (channel,message,status,user_id) values (?,?,?,?)
+2025-10-22T00:56:07.345-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Node -1 disconnected.
+2025-10-22T01:31:52.935-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T01:31:52.963-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T01:31:52.973-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T01:31:53.004-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T01:31:53.004-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T01:31:53.005-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T01:31:53.116-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T01:31:59.554-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m49s314ms).
+2025-10-22T03:08:37.931-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T03:08:38.038-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T03:08:38.042-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T03:08:38.172-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T03:08:40.929-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m40s165ms).
+2025-10-22T04:25:51.895-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T04:25:52.010-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T04:25:52.012-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T04:25:52.067-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T04:25:52.067-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T04:25:52.067-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T04:25:52.179-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T04:26:14.337-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m32s601ms).
+2025-10-22T04:44:00.882-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T04:44:00.888-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T04:44:00.889-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T04:44:00.899-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T04:44:00.904-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T04:44:00.904-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T04:44:01.008-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T04:44:29.481-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m15s101ms).
+2025-10-22T05:00:15.896-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T05:00:15.912-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T05:00:15.913-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T05:00:15.957-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T05:00:15.957-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T05:00:15.958-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T05:00:16.065-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T05:00:27.635-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m58s155ms).
+2025-10-22T05:17:49.027-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T05:17:49.030-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T05:17:49.031-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T05:17:49.052-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T05:17:49.053-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T05:17:49.054-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T05:17:49.163-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T05:18:08.603-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m10s964ms).
+2025-10-22T06:39:23.988-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Disconnecting from node 1 due to request timeout.
+2025-10-22T06:39:24.044-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Cancelled in-flight FETCH request with correlation id 33553 due to node 1 being disconnected (elapsed time since creation: 1023710ms, elapsed time since send: 1023709ms, request timeout: 30000ms)
+2025-10-22T06:39:24.125-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T06:39:24.125-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T06:39:24.125-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T06:39:24.140-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Error sending fetch request (sessionId=514940504, epoch=28648) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2025-10-22T06:39:24.215-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T06:39:42.739-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m33s236ms).
+2025-10-22T06:51:39.302-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T06:51:39.352-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T06:51:39.353-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T06:51:39.445-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T06:51:55.244-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m42s494ms).
+2025-10-22T06:54:56.429-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T06:54:56.538-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T06:54:56.538-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T06:54:56.576-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T06:54:56.576-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T06:54:56.577-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T06:54:56.681-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T06:55:07.672-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m58s713ms).
+2025-10-22T07:11:54.197-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Disconnecting from node 1 due to request timeout.
+2025-10-22T07:11:54.280-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Cancelled in-flight FETCH request with correlation id 34038 due to node 1 being disconnected (elapsed time since creation: 969959ms, elapsed time since send: 969959ms, request timeout: 30000ms)
+2025-10-22T07:11:54.289-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T07:11:54.290-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T07:11:54.290-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T07:11:54.286-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Error sending fetch request (sessionId=815566323, epoch=405) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2025-10-22T07:11:54.366-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T07:12:17.123-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m39s448ms).
+2025-10-22T07:15:07.151-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T07:15:07.220-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T07:15:07.226-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T07:15:07.288-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T07:15:07.288-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T07:15:07.288-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T07:15:07.390-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T07:15:09.515-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m38s888ms).
+2025-10-22T07:32:26.897-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T07:32:26.902-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T07:32:26.902-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T07:32:26.906-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T07:32:26.906-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T07:32:26.906-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T07:32:27.008-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T07:32:42.545-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m3s26ms).
+2025-10-22T07:48:24.912-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T07:48:24.914-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T07:48:24.914-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T07:48:24.918-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T07:48:24.919-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T07:48:24.919-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T07:48:25.024-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T07:48:52.934-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m40s385ms).
+2025-10-22T09:00:00.942-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T09:00:00.998-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T09:00:01.000-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T09:00:01.065-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T09:00:10.788-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m16s977ms).
+2025-10-22T09:01:36.575-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55s793ms).
+2025-10-22T09:12:54.967-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T09:12:54.975-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T09:12:54.976-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T09:12:55.033-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T09:12:58.959-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m22s384ms).
+2025-10-22T09:30:43.837-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T09:30:43.906-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T09:30:43.907-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T09:30:43.926-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T09:30:43.926-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T09:30:43.928-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T09:30:44.033-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T09:30:44.534-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m15s565ms).
+2025-10-22T09:47:24.755-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T09:47:24.858-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T09:47:24.859-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T09:47:24.893-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T09:47:24.894-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T09:47:24.894-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T09:47:24.999-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T09:47:37.998-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m23s491ms).
+2025-10-22T11:06:45.959-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T11:06:46.046-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T11:06:46.047-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T11:06:46.116-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T11:07:11.685-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m2s882ms).
+2025-10-22T12:53:34.989-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T12:53:35.066-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T12:53:35.067-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T12:53:35.107-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T12:53:35.108-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T12:53:35.108-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T12:53:35.215-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T12:53:51.762-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m8s895ms).
+2025-10-22T13:10:04.106-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T13:10:04.107-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T13:10:04.108-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T13:10:04.111-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T13:10:04.111-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T13:10:04.112-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T13:10:04.218-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T13:10:33.596-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m11s816ms).
+2025-10-22T13:12:35.440-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55s452ms).
+2025-10-22T13:29:18.840-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T13:29:18.921-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T13:29:18.923-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T13:29:18.956-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T13:29:18.957-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T13:29:18.958-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T13:29:19.063-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T13:29:26.903-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m51s464ms).
+2025-10-22T13:39:11.592-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T13:39:11.695-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T13:39:11.702-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T13:39:11.724-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T13:39:11.724-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T13:39:11.724-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T13:39:11.834-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T13:39:17.123-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m20s202ms).
+2025-10-22T13:56:42.830-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T13:56:42.947-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T13:56:42.949-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T13:56:42.963-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T13:56:42.964-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T13:56:42.965-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T13:56:43.074-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T13:57:00.953-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m13s818ms).
+2025-10-22T14:13:55.960-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T14:13:55.963-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T14:13:55.964-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T14:13:56.012-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T14:13:56.015-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T14:13:56.015-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T14:13:56.015-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T14:13:56.125-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T14:14:18.143-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m47s180ms).
+2025-10-22T14:31:14.016-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T14:31:14.018-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T14:31:14.019-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T14:31:14.044-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T14:31:14.044-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T14:31:14.046-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T14:31:14.150-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T14:31:19.546-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m1s404ms).
+2025-10-22T14:47:15.086-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T14:47:15.087-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T14:47:15.087-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T14:47:15.108-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T14:47:15.108-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T14:47:15.108-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T14:47:15.211-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T14:47:33.019-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m43s466ms).
+2025-10-22T15:03:10.098-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T15:03:10.100-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T15:03:10.100-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T15:03:10.110-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T15:03:10.110-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T15:03:10.111-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T15:03:10.212-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T15:03:10.388-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m37s369ms).
+2025-10-22T16:14:57.008-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T16:14:57.129-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T16:14:57.141-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T16:14:57.376-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T16:15:02.252-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m21s51ms).
+2025-10-22T16:20:46.256-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T16:20:46.260-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T16:20:46.263-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T16:20:46.291-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T16:20:46.292-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T16:20:46.292-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T16:20:46.394-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T16:20:46.854-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m14s616ms).
+2025-10-22T17:31:40.193-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T17:31:40.251-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T17:31:40.253-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T17:31:40.426-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T17:31:40.833-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m53s517ms).
+2025-10-22T17:40:56.686-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T17:40:56.820-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T17:40:56.821-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T17:40:57.180-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T17:41:09.565-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m58s722ms).
+2025-10-22T18:28:06.072-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Disconnecting from node 1 due to request timeout.
+2025-10-22T18:28:06.220-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Cancelled in-flight FETCH request with correlation id 88482 due to node 1 being disconnected (elapsed time since creation: 898495ms, elapsed time since send: 898495ms, request timeout: 30000ms)
+2025-10-22T18:28:06.235-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T18:28:06.236-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T18:28:06.237-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T18:28:06.232-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Error sending fetch request (sessionId=1242071765, epoch=46457) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2025-10-22T18:28:06.558-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T18:28:07.854-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m27s966ms).
+2025-10-22T18:43:51.879-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T18:43:51.979-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T18:43:51.981-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T18:43:51.996-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T18:43:51.996-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T18:43:51.997-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T18:43:52.100-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T18:44:06.142-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m28s269ms).
+2025-10-22T18:59:38.024-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T18:59:38.037-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T18:59:38.041-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T18:59:38.077-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T18:59:38.077-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T18:59:38.077-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T18:59:38.183-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T19:00:05.062-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m28s907ms).
+2025-10-22T19:15:55.106-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Disconnecting from node 1 due to request timeout.
+2025-10-22T19:15:55.124-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Cancelled in-flight FETCH request with correlation id 88835 due to node 1 being disconnected (elapsed time since creation: 923585ms, elapsed time since send: 923585ms, request timeout: 30000ms)
+2025-10-22T19:15:55.126-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T19:15:55.126-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T19:15:55.127-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T19:15:55.126-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Error sending fetch request (sessionId=1444524032, epoch=290) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2025-10-22T19:15:55.231-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T19:15:57.558-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m52s495ms).
+2025-10-22T19:32:41.885-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m14s335ms).
+2025-10-22T19:32:42.098-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T19:32:42.111-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T19:32:42.111-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T19:32:42.176-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T19:54:03.893-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T19:54:03.979-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T19:54:03.980-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T19:54:04.018-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T19:54:04.021-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T19:54:04.021-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T19:54:04.127-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T19:54:27.792-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m45s743ms).
+2025-10-22T20:12:14.111-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T20:12:14.117-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T20:12:14.117-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T20:12:14.149-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T20:12:14.149-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T20:12:14.149-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T20:12:14.259-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T20:12:20.708-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m52s915ms).
+2025-10-22T20:32:39.838-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Disconnecting from node 1 due to request timeout.
+2025-10-22T20:32:39.955-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Cancelled in-flight FETCH request with correlation id 90680 due to node 1 being disconnected (elapsed time since creation: 911160ms, elapsed time since send: 911160ms, request timeout: 30000ms)
+2025-10-22T20:32:39.961-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2025-10-22T20:32:39.963-05:00  INFO 54825 --- [notification-service] [n-service-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T20:32:39.965-05:00  INFO 54825 --- [notification-service] [n-service-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Client requested disconnect from node 2147483646
+2025-10-22T20:32:39.962-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Error sending fetch request (sessionId=630713297, epoch=1563) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2025-10-22T20:32:40.018-05:00  INFO 54825 --- [notification-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-group-1, groupId=notification-service-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-22T20:33:01.380-05:00  WARN 54825 --- [notification-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m40s569ms).

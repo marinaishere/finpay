@@ -1,0 +1,145 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.finpay:account-service >---------------------
+[INFO] Building Account Service 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Parameter 'release' is unknown for plugin 'spring-boot-maven-plugin:3.2.5:run (default-cli)'
+[INFO] 
+[INFO] >>> spring-boot:3.2.5:run (default-cli) > test-compile @ account-service >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ account-service ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ account-service ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ account-service ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /Users/mengruwang/Github/finpay/account-service/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ account-service ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:3.2.5:run (default-cli) < test-compile @ account-service <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.2.5:run (default-cli) @ account-service ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2025-10-22T00:46:55.262-05:00  INFO 54696 --- [account-service] [  restartedMain] [                                                 ] c.f.accounts.AccountServiceApplication   : Starting AccountServiceApplication using Java 21.0.7 with PID 54696 (/Users/mengruwang/Github/finpay/account-service/target/classes started by mengruwang in /Users/mengruwang/Github/finpay/account-service)
+2025-10-22T00:46:55.263-05:00  INFO 54696 --- [account-service] [  restartedMain] [                                                 ] c.f.accounts.AccountServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-22T00:46:55.279-05:00  INFO 54696 --- [account-service] [  restartedMain] [                                                 ] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-22T00:46:55.279-05:00  INFO 54696 --- [account-service] [  restartedMain] [                                                 ] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-22T00:46:55.696-05:00  INFO 54696 --- [account-service] [  restartedMain] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-22T00:46:55.721-05:00  INFO 54696 --- [account-service] [  restartedMain] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 1 JPA repository interface.
+2025-10-22T00:46:55.799-05:00  INFO 54696 --- [account-service] [  restartedMain] [                                                 ] o.s.cloud.context.scope.GenericScope     : BeanFactory id=153a00ef-ae9e-31e6-98a9-c7aa8830ad82
+2025-10-22T00:46:56.109-05:00  INFO 54696 --- [account-service] [  restartedMain] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-10-22T00:46:56.115-05:00  INFO 54696 --- [account-service] [  restartedMain] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-22T00:46:56.115-05:00  INFO 54696 --- [account-service] [  restartedMain] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-10-22T00:46:56.135-05:00  INFO 54696 --- [account-service] [  restartedMain] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-22T00:46:56.136-05:00  INFO 54696 --- [account-service] [  restartedMain] [                                                 ] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 857 ms
+2025-10-22T00:46:56.309-05:00  INFO 54696 --- [account-service] [  restartedMain] [                                                 ] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-22T00:46:56.339-05:00  INFO 54696 --- [account-service] [  restartedMain] [                                                 ] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-10-22T00:46:56.354-05:00  INFO 54696 --- [account-service] [  restartedMain] [                                                 ] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-22T00:46:56.446-05:00  INFO 54696 --- [account-service] [  restartedMain] [                                                 ] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-22T00:46:56.457-05:00  INFO 54696 --- [account-service] [  restartedMain] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-22T00:46:56.534-05:00  INFO 54696 --- [account-service] [  restartedMain] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@11d7b50f
+2025-10-22T00:46:56.535-05:00  INFO 54696 --- [account-service] [  restartedMain] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-22T00:46:56.553-05:00  WARN 54696 --- [account-service] [  restartedMain] [                                                 ] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-22T00:46:56.909-05:00  INFO 54696 --- [account-service] [  restartedMain] [                                                 ] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-22T00:46:56.933-05:00  INFO 54696 --- [account-service] [  restartedMain] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-22T00:46:57.155-05:00  WARN 54696 --- [account-service] [  restartedMain] [                                                 ] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-22T00:46:57.338-05:00  INFO 54696 --- [account-service] [  restartedMain] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-10-22T00:46:57.389-05:00  INFO 54696 --- [account-service] [  restartedMain] [                                                 ] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@13da17f3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@32ab28ec, org.springframework.security.web.context.SecurityContextHolderFilter@150f3d84, org.springframework.security.web.header.HeaderWriterFilter@2b366dc2, org.springframework.web.filter.CorsFilter@7b4d6b8a, org.springframework.security.web.authentication.logout.LogoutFilter@10dfd5cf, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@64f434da, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@37e2c699, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2fa3858c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@40e37aec, org.springframework.security.web.access.ExceptionTranslationFilter@6c257332, org.springframework.security.web.access.intercept.AuthorizationFilter@5e41dd29]
+2025-10-22T00:46:57.594-05:00  WARN 54696 --- [account-service] [  restartedMain] [                                                 ] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-10-22T00:46:57.652-05:00  INFO 54696 --- [account-service] [  restartedMain] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path ''
+2025-10-22T00:46:57.664-05:00  INFO 54696 --- [account-service] [  restartedMain] [                                                 ] c.f.accounts.AccountServiceApplication   : Started AccountServiceApplication in 2.551 seconds (process running for 2.738)
+2025-10-22T00:47:35.820-05:00  INFO 54696 --- [account-service] [nio-8082-exec-1] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-22T00:47:35.821-05:00  INFO 54696 --- [account-service] [nio-8082-exec-1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-22T00:47:35.830-05:00  INFO 54696 --- [account-service] [nio-8082-exec-1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+Hibernate: select a1_0.id,a1_0.balance,a1_0.owner_email from accounts a1_0 where a1_0.id=?
+Hibernate: select a1_0.id,a1_0.balance,a1_0.owner_email from accounts a1_0 where a1_0.id=?
+Hibernate: update accounts set balance=?,owner_email=? where id=?
+Hibernate: select a1_0.id,a1_0.balance,a1_0.owner_email from accounts a1_0 where a1_0.id=?
+Hibernate: update accounts set balance=?,owner_email=? where id=?
+Hibernate: select a1_0.id,a1_0.balance,a1_0.owner_email from accounts a1_0 where a1_0.id=?
+Hibernate: select a1_0.id,a1_0.balance,a1_0.owner_email from accounts a1_0 where a1_0.id=?
+Hibernate: update accounts set balance=?,owner_email=? where id=?
+Hibernate: select a1_0.id,a1_0.balance,a1_0.owner_email from accounts a1_0 where a1_0.id=?
+Hibernate: update accounts set balance=?,owner_email=? where id=?
+Hibernate: select a1_0.id,a1_0.balance,a1_0.owner_email from accounts a1_0 where a1_0.id=?
+Hibernate: select a1_0.id,a1_0.balance,a1_0.owner_email from accounts a1_0 where a1_0.id=?
+Hibernate: update accounts set balance=?,owner_email=? where id=?
+Hibernate: select a1_0.id,a1_0.balance,a1_0.owner_email from accounts a1_0 where a1_0.id=?
+Hibernate: update accounts set balance=?,owner_email=? where id=?
+Hibernate: select a1_0.id,a1_0.balance,a1_0.owner_email from accounts a1_0 where a1_0.id=?
+Hibernate: select a1_0.id,a1_0.balance,a1_0.owner_email from accounts a1_0 where a1_0.id=?
+Hibernate: update accounts set balance=?,owner_email=? where id=?
+Hibernate: select a1_0.id,a1_0.balance,a1_0.owner_email from accounts a1_0 where a1_0.id=?
+Hibernate: update accounts set balance=?,owner_email=? where id=?
+Hibernate: select a1_0.id,a1_0.balance,a1_0.owner_email from accounts a1_0 where a1_0.id=?
+Hibernate: select a1_0.id,a1_0.balance,a1_0.owner_email from accounts a1_0 where a1_0.id=?
+Hibernate: update accounts set balance=?,owner_email=? where id=?
+Hibernate: select a1_0.id,a1_0.balance,a1_0.owner_email from accounts a1_0 where a1_0.id=?
+Hibernate: update accounts set balance=?,owner_email=? where id=?
+Hibernate: select a1_0.id,a1_0.balance,a1_0.owner_email from accounts a1_0 where a1_0.id=?
+Hibernate: select a1_0.id,a1_0.balance,a1_0.owner_email from accounts a1_0 where a1_0.id=?
+Hibernate: update accounts set balance=?,owner_email=? where id=?
+Hibernate: select a1_0.id,a1_0.balance,a1_0.owner_email from accounts a1_0 where a1_0.id=?
+Hibernate: update accounts set balance=?,owner_email=? where id=?
+Hibernate: select a1_0.id,a1_0.balance,a1_0.owner_email from accounts a1_0 where a1_0.id=?
+Hibernate: select a1_0.id,a1_0.balance,a1_0.owner_email from accounts a1_0 where a1_0.id=?
+Hibernate: update accounts set balance=?,owner_email=? where id=?
+Hibernate: select a1_0.id,a1_0.balance,a1_0.owner_email from accounts a1_0 where a1_0.id=?
+Hibernate: update accounts set balance=?,owner_email=? where id=?
+2025-10-22T01:32:19.996-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m49s297ms).
+2025-10-22T03:09:01.472-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m40s159ms).
+2025-10-22T04:26:04.983-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m32s596ms).
+2025-10-22T04:44:20.178-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m15s94ms).
+2025-10-22T05:00:18.347-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m58s172ms).
+2025-10-22T05:17:59.315-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m10s964ms).
+2025-10-22T06:39:33.401-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m33s236ms).
+2025-10-22T06:51:45.939-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m42s487ms).
+2025-10-22T06:54:58.378-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m58s718ms).
+2025-10-22T07:12:07.828-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m39s448ms).
+2025-10-22T07:15:30.221-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m38s889ms).
+2025-10-22T07:32:33.257-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m3s36ms).
+2025-10-22T07:48:43.649-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m40s385ms).
+2025-10-22T09:00:01.574-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m16s988ms).
+2025-10-22T09:01:27.371-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55s792ms).
+2025-10-22T09:13:19.755-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m22s371ms).
+2025-10-22T09:31:05.304-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m15s531ms).
+2025-10-22T09:47:28.774-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m23s471ms).
+2025-10-22T11:07:02.523-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m2s889ms).
+2025-10-22T12:53:42.721-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m8s886ms).
+2025-10-22T13:10:24.609-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m11s820ms).
+2025-10-22T13:12:26.441-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55s453ms).
+2025-10-22T13:29:47.921-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m51s471ms).
+2025-10-22T13:39:38.123-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m20s194ms).
+2025-10-22T13:56:51.967-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m13s836ms).
+2025-10-22T14:14:09.165-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m47s185ms).
+2025-10-22T14:31:40.573-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m1s388ms).
+2025-10-22T14:47:24.040-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m43s466ms).
+2025-10-22T15:03:31.406-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m37s347ms).
+2025-10-22T16:15:23.217-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m21s29ms).
+2025-10-22T16:21:07.874-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m14s613ms).
+2025-10-22T17:32:01.954-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m53s517ms).
+2025-10-22T17:41:00.745-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m58s825ms).
+2025-10-22T18:28:29.085-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m27s972ms).
+2025-10-22T18:43:57.411-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m28s347ms).
+2025-10-22T18:59:56.333-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m28s909ms).
+2025-10-22T19:16:18.819-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m52s476ms).
+2025-10-22T19:33:03.124-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m14s294ms).
+2025-10-22T19:54:18.931-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m45s738ms).
+2025-10-22T20:12:41.883-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m52s938ms).
+2025-10-22T20:32:52.520-05:00  WARN 54696 --- [account-service] [l-1 housekeeper] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m40s565ms).
