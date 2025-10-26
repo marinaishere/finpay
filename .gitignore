@@ -15,7 +15,6 @@ Thumbs.db
 # Security - Never commit private keys and sensitive files
 **/keys/private.pem
 **/keys/*.key
-*.pem
 .env
 .env.local
 credentials.json
