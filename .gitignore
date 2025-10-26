@@ -1,3 +1,19 @@
 **/target/**
 .idea/**
 **/.DS_Store
+
+# Security - Never commit private keys and sensitive files
+**/keys/private.pem
+**/keys/*.key
+*.pem
+.env
+.env.local
+credentials.json
+**/secrets/**
+
+# Logs and data directories
+**/logs/**
+**/postgres-data/**
+**/elasticsearch-data/**
+*.log
+*.pid
