@@ -7,29 +7,58 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.cloud.gateway.route.RouteLocator;
 
+/**
+ * Configuration class for API Gateway routes.
+ * Defines routing rules for all microservices including circuit breakers,
+ * rate limiting, and Swagger documentation aggregation.
+ */
 @Configuration
 public class GatewayRoutesConfig {
     private final RedisRateLimiter redisRateLimiter;
     private final KeyResolver userKeyResolver;
 
+    /**
+     * Constructs the GatewayRoutesConfig with required dependencies.
+     *
+     * @param redisRateLimiter Rate limiter for controlling request rates
+     * @param userKeyResolver Resolver for identifying users in rate limiting
+     */
     public GatewayRoutesConfig(RedisRateLimiter redisRateLimiter, KeyResolver userKeyResolver) {
         this.redisRateLimiter = redisRateLimiter;
         this.userKeyResolver = userKeyResolver;
     }
+    /**
+     * Configures custom routes for all microservices.
+     * Routes include:
+     * - Auth Service: User authentication and JWT generation
+     * - Account Service: Account management and balance operations
+     * - Transaction Service: Money transfers with circuit breaker
+     * - Notification Service: User notifications
+     * - Fraud Service: Fraud detection with rate limiting
+     * - Swagger documentation routes for all services
+     *
+     * @param builder RouteLocatorBuilder for defining routes
+     * @return RouteLocator with all configured routes
+     */
     @Bean
     public RouteLocator customRotes(RouteLocatorBuilder builder) {
         return builder.routes()
+                // Auth Service routes - handles authentication
                 .route("auth-service", r -> r.path("/auth-services/**")
                         .uri("http://localhost:8081"))
+                // Account Service routes - manages accounts and balances
                 .route("account-service", r -> r.path("/accounts/**")
                         .uri("http://localhost:8082"))
+                // Transaction Service routes - handles transfers with circuit breaker for resilience
                 .route("transaction-service", r -> r.path("/transactions/**")
                         .filters(f -> f.circuitBreaker(c -> c
                                 .setName("transactionCB")
                                 .setFallbackUri("forward:/fallback/transactions")))
                         .uri("http://localhost:8083"))
+                // Notification Service routes - sends user notifications
                 .route("notification-service", r -> r.path("/notifications/**")
                         .uri("http://localhost:8084"))
+                // Fraud Service routes - fraud detection with rate limiting
                 .route("fraud-service", r -> r.path("/frauds/**")
                         .filters(f -> f
                                 .requestRateLimiter(c -> {
@@ -39,7 +68,7 @@ public class GatewayRoutesConfig {
                         )
                         .uri("http://localhost:8085")
                 )
-                // Swagger API docs routes
+                // Swagger API documentation aggregation routes
                 .route("api-gateway-docs", r -> r.path("/v3/api-docs/gateway")
                         .filters(f -> f.rewritePath("/v3/api-docs/gateway", "/v3/api-docs"))
                         .uri("http://localhost:8080"))

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Login</title>
+</head>
+<body>
+    <h1>Test FinPay Login</h1>
+    <div>
+        <input type="text" id="username" placeholder="Username" value="johndoe">
+        <input type="password" id="password" placeholder="Password" value="password123">
+        <button onclick="testLogin()">Test Login</button>
+    </div>
+    <div id="result"></div>
+
+    <script>
+        async function testLogin() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const resultDiv = document.getElementById('result');
+
+            resultDiv.innerHTML = 'Logging in...';
+
+            try {
+                const response = await fetch('http://localhost:8080/auth-services/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ username, password })
+                });
+
+                console.log('Response status:', response.status);
+                console.log('Response headers:', response.headers);
+
+                const data = await response.json();
+                console.log('Response data:', data);
+
+                if (response.ok && data.token) {
+                    resultDiv.innerHTML = `<pre style="color: green;">SUCCESS!\nToken: ${data.token.substring(0, 50)}...</pre>`;
+                } else {
+                    resultDiv.innerHTML = `<pre style="color: red;">FAILED!\n${JSON.stringify(data, null, 2)}</pre>`;
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                resultDiv.innerHTML = `<pre style="color: red;">ERROR!\n${error.message}</pre>`;
+            }
+        }
+    </script>
+</body>
+</html>

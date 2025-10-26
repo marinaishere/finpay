@@ -10,6 +10,10 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
+/**
+ * Service class handling notification sending logic.
+ * Supports multiple notification channels including EMAIL, SMS, and PUSH notifications.
+ */
 @Service
 @RequiredArgsConstructor
 public class NotificationService {
@@ -18,7 +22,16 @@ public class NotificationService {
     private final NotificationRepository repository;
     private final JavaMailSender mailSender;
 
+    /**
+     * Sends a notification to a user via the specified channel.
+     * Creates a notification record with PENDING status, attempts delivery,
+     * and updates the status to SENT or FAILED based on the outcome.
+     *
+     * @param request NotificationRequest containing userId, message, and channel
+     * @return Notification entity with delivery status
+     */
     public Notification sendNotification(NotificationRequest request) {
+        // Create notification record with PENDING status
         Notification notification = Notification.builder()
                 .userId(request.getUserId())
                 .message(request.getMessage())
@@ -27,13 +40,16 @@ public class NotificationService {
                 .build();
 
         try {
+            // Send via EMAIL channel using JavaMailSender
             if ("EMAIL".equalsIgnoreCase(request.getChannel())) {
                 SimpleMailMessage mail = new SimpleMailMessage();
-                mail.setTo(request.getUserId()); // assuming userId = email
+                mail.setFrom("noreply@finpay.com");
+                mail.setTo(request.getUserId()); // userId is assumed to be email address
                 mail.setSubject("FinPay Notification");
                 mail.setText(request.getMessage());
                 mailSender.send(mail);
             } else {
+                // For other channels (SMS, PUSH), simulate the notification
                 log.info("Simulating {} notification for {}: {}", request.getChannel(), request.getUserId(), request.getMessage());
             }
 

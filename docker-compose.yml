@@ -8,7 +8,7 @@ services:
         ports:
             - "5432:5432"
         volumes:
-            - postgres_data:/var/lib/postgresql/data
+            - ./postgres-data:/var/lib/postgresql/data
     pgadmin:
         image: dpage/pgadmin4:latest
         container_name: pgadmin
@@ -34,21 +34,21 @@ services:
             - "2181:2181"
 
     kafka:
-        image: bitnami/kafka:3.7
+        image: confluentinc/cp-kafka:7.6.0
+        hostname: kafka
+        container_name: kafka
         environment:
-            KAFKA_CFG_ZOOKEEPER_CONNECT: zookeeper:2181
-            ALLOW_PLAINTEXT_LISTENER: "yes"
-            KAFKA_CFG_LISTENERS: PLAINTEXT://:9092
-            KAFKA_CFG_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+            KAFKA_BROKER_ID: 1
+            KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+            KAFKA_LISTENERS: INTERNAL://0.0.0.0:29092,EXTERNAL://0.0.0.0:9092
+            KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka:29092,EXTERNAL://localhost:9092
+            KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INTERNAL:PLAINTEXT,EXTERNAL:PLAINTEXT
+            KAFKA_INTER_BROKER_LISTENER_NAME: INTERNAL
+            KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
             # Enable JMX for Kafka
-            JMX_PORT: 9999
-            KAFKA_JMX_OPTS: >
-              -Dcom.sun.management.jmxremote
-              -Dcom.sun.management.jmxremote.port=9999
-              -Dcom.sun.management.jmxremote.rmi.port=9999
-              -Dcom.sun.management.jmxremote.authenticate=false
-              -Dcom.sun.management.jmxremote.ssl=false
-              -Djava.rmi.server.hostname=kafka
+            KAFKA_JMX_PORT: 9999
+            KAFKA_JMX_HOSTNAME: kafka
+            KAFKA_OPTS: -Djava.rmi.server.hostname=kafka
         ports:
             - "9092:9092"
             - "9999:9999"
@@ -78,14 +78,15 @@ services:
         - GF_SECURITY_ADMIN_PASSWORD=admin
 
     kafka-jmx-exporter:
-      image: sscaling/jmx-prometheus-exporter
+      image: bitnami/jmx-exporter:latest
+      platform: linux/arm64
       ports:
-        - "7071:7071"
+        - "7071:5556"
       environment:
-        SERVICE_PORT: 7071
-        CONFIG_YML: /config/kafka-jmx.yml
+        - SERVICE_PORT=5556
       volumes:
-        - ./kafka-jmx.yml:/config/kafka-jmx.yml
+        - ./kafka-jmx.yml:/etc/jmx-exporter/config.yml
+      command: 5556 /etc/jmx-exporter/config.yml
       depends_on:
         - kafka
 
@@ -100,7 +101,7 @@ services:
         - "9200:9200"
         - "9300:9300"
       volumes:
-        - elasticsearch_data:/usr/share/elasticsearch/data
+        - ./elasticsearch-data:/usr/share/elasticsearch/data
 
     kibana:
       image: docker.elastic.co/kibana/kibana:8.10.2
@@ -121,7 +122,3 @@ services:
         - ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf
       depends_on:
         - elasticsearch
-
-volumes:
-    postgres_data:
-    elasticsearch_data:

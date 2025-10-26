@@ -3,11 +3,48 @@ jmxUrl: service:jmx:rmi:///jndi/rmi://kafka:9999/jmxrmi
 lowercaseOutputName: true
 lowercaseOutputLabelNames: true
 rules:
+  # Topic-level metrics with topic label
   - pattern: "kafka.server<type=(.+), name=(.+)PerSec\\, topic=(.+)><>Count"
-    name: kafka_$1_$2_total
+    name: kafka_server_$1_$2_total
     labels:
       topic: "$3"
     type: COUNTER
+
+  # Messages in per second
+  - pattern: "kafka.server<type=BrokerTopicMetrics, name=MessagesInPerSec><>Count"
+    name: kafka_messages_in_total
+    type: COUNTER
+
+  # Topic-level messages in
+  - pattern: "kafka.server<type=BrokerTopicMetrics, name=MessagesInPerSec, topic=(.+)><>Count"
+    name: kafka_topic_messages_in_total
+    labels:
+      topic: "$1"
+    type: COUNTER
+
+  # Bytes in/out
+  - pattern: "kafka.server<type=BrokerTopicMetrics, name=(BytesInPerSec|BytesOutPerSec)><>Count"
+    name: kafka_$1_total
+    type: COUNTER
+
+  # Network metrics
+  - pattern: "kafka.network<type=RequestMetrics, name=RequestsPerSec, request=(.+)><>Count"
+    name: kafka_network_requests_total
+    labels:
+      request: "$1"
+    type: COUNTER
+
+  # General gauges
   - pattern: "kafka.server<type=(.+), name=(.+)><>Value"
-    name: kafka_$1_$2
+    name: kafka_server_$1_$2
+    type: GAUGE
+
+  # Partition count
+  - pattern: "kafka.server<type=ReplicaManager, name=PartitionCount><>Value"
+    name: kafka_partitions_count
+    type: GAUGE
+
+  # Under-replicated partitions
+  - pattern: "kafka.server<type=ReplicaManager, name=UnderReplicatedPartitions><>Value"
+    name: kafka_under_replicated_partitions
     type: GAUGE
